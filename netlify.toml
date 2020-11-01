@@ -3,5 +3,5 @@
   publish = "out"
 [[redirects]]
   from = "/*"
-  to = "/404"
-  status = 500
+  to = "/"
+  status = 200
