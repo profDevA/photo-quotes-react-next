@@ -1,3 +1,7 @@
 [build]
   command = "yarn run build && yarn run export"
   publish = "out"
+[[redirects]]
+  from = "/*"
+  to = "/404"
+  status = 500
