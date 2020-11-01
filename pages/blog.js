@@ -1,4 +1,4 @@
-import Header from '../components/header'
+import Header from '../components/header/WhiteHeader'
 import Footer from '../components/footer'
 import Comments from '../components/comments';
 

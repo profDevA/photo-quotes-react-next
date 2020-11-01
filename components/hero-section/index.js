@@ -4,7 +4,7 @@ export default function HeroSection() {
             <div className="hero-section__left col-xl-3 col-lg-4 wow fadeInRight">
                 <div className="hero-section__left_top">
                     <h2 className="big-lettering">Best</h2>
-                    <h1 className="mt30">Photo Quotes</h1>
+                    <h2 className="mt30">Photo Quotes</h2>
                 </div>
                 <div className="hero-section__left_bottom scroll-down">
                     <img src="/assets/icons/mouse.svg" alt="" />

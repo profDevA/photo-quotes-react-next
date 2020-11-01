@@ -9,6 +9,8 @@ export default function Home() {
         <Header />
         <HeroSection />
       </section>
+      <div>
+      </div>
       <main>
         <section className="container-fluid gray-gradient" id="first-section">
           <div className="row container ptb110">
