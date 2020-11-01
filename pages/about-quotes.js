@@ -59,7 +59,7 @@ export default function AboutQutotes() {
 
                 <section className="pb80">
                     <div className="banner-container banner-container-728">
-                        <img src="assets/google-728.jpg" alt="" className="banner-728" />
+                        <img src="assets/google-728.jpg" alt="" className="" />
                     </div>
                 </section>
 

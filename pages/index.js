@@ -152,7 +152,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="banner-container banner-container-300">
-                <img src="/assets/google-300.jpg" alt="" className="banner-300" />
+                <img src="/assets/google-300.jpg" alt="" className="" />
               </div>
             </div>
             <div className="col-12 col-lg-6 wow zoomIn" data-wow-delay=".4s">
@@ -254,7 +254,7 @@ export default function Home() {
         </section>
         <section className="container-fluid gray-gradient pb160 pt130 rel">
           <div className="banner-container banner-container-728 banner-container-abs">
-            <img src="/assets/google-728.jpg" alt="" className="banner-728" />
+            <img src="/assets/google-728.jpg" alt="" className="" />
           </div>
 
           <div className="container container-blog container-blog__nogutters rel">
