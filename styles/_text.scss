@@ -1,0 +1,221 @@
+@import "vars";
+.braggest {font-family: "Braggest", sans-serif;}
+.grotzec {font-family: "Grotzec", sans-serif;}
+
+.fs13 {font-size: 13px}
+.fs16 {font-size: 16px}
+.fs18 {font-size: 18px}
+.fs26 {font-size: 26px}
+.fs40 {
+  font-size: 40px;
+  line-height: 50px;}
+.fs45 {font-size: 45px}
+.fs104 {font-size: 104px}
+.fs144 {font-size: 144px}
+
+.bold {font-weight: 700}
+.semibold {font-weight: 600}
+
+.gray-font {color: $gray!important;}
+.dark-gray-font {color: $dark-gray!important;}
+.white-font {color: #fff!important;}
+.blue-font {color: $blue!important;}
+
+.ls2 {letter-spacing: .02rem}
+.upper {text-transform: uppercase}
+.tac {
+  text-align: center;
+}
+
+sup {
+  margin-left: 5px;
+}
+
+.tar {
+  text-align: right;
+}
+
+.gradient-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  //fs104 grotzec dark-gray-font
+  font-size: 104px;
+  font-family: "Grotzec", sans-serif;
+  color: $dark-gray;
+  font-weight: 400;
+  line-height: 99px;
+
+  @media screen and (max-width: $sm-point){
+    font-size: 95px;
+    line-height: 90px;
+  }
+}
+
+.main-title {
+  font-size: 80px;
+  line-height: 80px;
+
+  @media screen and (max-width: $md-point){
+    font-size: 70px;
+    line-height: 75px;
+  }
+
+  @media screen and (max-width: $sm-point){
+    font-size: 60px;
+    line-height: 65px;
+  }
+
+  @media screen and (max-width: $xxs-point){
+    font-size: 55px;
+    line-height: 65px;
+  }
+
+}
+
+.big-lettering {
+  //fs144 braggest dark-gray-font
+  font-size: 144px;
+  font-family: "Braggest", sans-serif;
+  color: $dark-gray;
+  font-weight: 400;
+  line-height: 99px;
+
+  @media screen and (max-width: $sm-point){
+    font-size: 134px;
+    line-height: 90px;
+  }
+}
+
+h2{
+  font-size: 70px;
+  line-height: 70px;
+  color: $dark-gray;
+  font-family: "Grotzec", sans-serif;
+  font-weight: 600;
+
+  @media screen and (max-width: $sm-point){
+    font-size: 35px;
+    line-height: 40px;
+    font-weight: 600;
+  }
+}
+
+h3 {
+  font-size: 45px;
+  color: $dark-gray;
+  font-family: "Grotzec", sans-serif;
+  font-weight: 600;
+  line-height: 50px;
+  display: inline-block;
+
+  @media screen and (max-width: $sm-point){
+    font-size: 35px;
+    line-height: 40px;
+  }
+}
+
+.text45 {
+  font-size: 45px!important;
+  line-height: 50px!important;
+}
+
+.counter {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  margin-right: 8px!important;
+
+  @media screen and (max-width: 767px){
+    margin-right: 5px!important;
+  }
+
+  &__comments {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    color: $dark-gray;
+    letter-spacing: 2px;
+    margin-left: 10px;
+  }
+}
+
+
+.title {
+  font-size: 26px;
+  line-height: 35px;
+  font-weight: 700;
+  color: $dark-gray;
+
+  @media screen and (max-width: $lg-point){
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+}
+
+.text20 {
+  font-size: 20px;
+  color: $dark-gray;
+  line-height: 30px;
+  font-weight: 600;
+}
+
+.text18 {
+  font-size: 18px;
+  color: $gray;
+  line-height: 30px;
+
+  @media screen and (max-width: $xs-point){
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.text16 {
+  font-size: 16px;
+  color: $dark-gray;
+  line-height: 30px;
+
+  @media screen and (max-width: $xs-point){
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.wide-text {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 20px;
+}
+
+.title-more {
+  display: block;
+  text-align: right;
+}
+
+.text__small {
+  font-size: 13px;
+  color: $gray;
+  transition: color .3s ease;
+}
+
+a {
+  transition: all .3s ease;
+
+  &:hover {
+    color: $blue;
+  }
+
+}
+
+.paragraph {
+  font-size: 18px;
+  color: #fff;
+}

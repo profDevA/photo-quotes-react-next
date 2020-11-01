@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="15px" viewBox="0 0 17 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="90.9333333%" y1="104.55594%" x2="25%" y2="5.76701269%" id="linearGradient-1">
+            <stop stop-color="#D848B3" offset="1%"></stop>
+            <stop stop-color="#F28577" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons/heart-fill" fill="url(#linearGradient-1)">
+            <g id="icons/heart-outline">
+                <path d="M15.5752099,1.38855856 C14.6857072,0.492882883 13.503223,0 12.245223,0 C10.9870441,0 9.80442566,0.492882883 8.91460987,1.38855856 L8.47627829,1.83 L8.03794671,1.38855856 C7.14839934,0.492882883 5.9655125,3.20064295e-16 4.70760197,3.20064295e-16 C3.44973618,3.20064295e-16 2.26675987,0.492882883 1.37730197,1.38855856 C-0.459100658,3.23779279 -0.459100658,6.24657658 1.37730197,8.09509009 L7.95764408,14.7208108 C8.06523618,14.8295495 8.19917829,14.8961261 8.33911513,14.9217568 C8.38604408,14.9310811 8.43324145,14.9354054 8.48052829,14.9354054 C8.66667829,14.9354054 8.85314145,14.8639189 8.9949125,14.7208108 L15.5752546,8.09509009 C17.4117467,6.24657658 17.4117467,3.23779279 15.5752099,1.38855856 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>

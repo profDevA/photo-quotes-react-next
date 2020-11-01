@@ -1,0 +1,33 @@
+html, body {
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+
+  @media screen and (max-width: 1199px){
+    background-color: #1B2731;
+  }
+}
+
+* {
+  outline: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+input, button {
+  background-color: unset;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}

@@ -1,0 +1,36 @@
+.small-card {
+  $width: 100%;
+  $height: 280px;
+  $p1: 30px;
+  $p2: 30px;
+  $margin: 20px;
+
+  @include card($width,$height,$p1,$p2);
+
+  .card__bottom {
+    margin-top: $margin;
+  }
+
+  .card__text {
+    p {
+      @include cardText(26px,35px);
+      max-height: 175px;
+    }
+  }
+
+  @media screen and (max-width: $sm-point){
+    .card__text {
+      p {
+        @include cardText(22px,30px);
+        max-height: 150px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $xs-point){
+    padding-left: $p2/2;
+    padding-right: $p2/2;
+  }
+}
+
+

@@ -1,0 +1,88 @@
+.container-dayquotes{
+  padding-left: 40px;
+  .row{
+    margin-left: -20px!important;
+    margin-right: -20px!important;
+  }
+
+  .col{
+    padding-right: 20px!important;
+    padding-left: 20px!important;
+  }
+
+  .col:nth-child(3),.col:nth-child(4) {
+    margin-top: 40px;
+  }
+
+  @media (max-width: 1199px) {
+    margin-top: 80px;
+    padding-left: 0!important;
+
+    h3 {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .col:not(:first-child) {
+      flex-basis: unset;
+    }
+
+    .row{
+      margin-left: 0!important;
+      margin-right: 0!important;
+    }
+
+    .col{
+      padding-right: 0!important;
+      padding-left: 0!important;
+    }
+
+    .col-sm-6:first-child {
+      img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media (max-width: $sm-point) {
+    margin-top: 52px;
+  }
+}
+
+.container-links {
+  @media (max-width: 1199px){
+    .list-links__gray {
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        width: 50%;
+      }
+    }
+  }
+
+  @media (max-width: 991px){
+    width: 50%;
+    .list-links__gray {
+      li {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 480px){
+    h3 {
+      max-width: 75%;
+    }
+  }
+
+  @media (max-width: 360px){
+    h3 {
+      max-width: 90%;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.middle-card {
+  $width: 100%;
+  $height: 340px;
+  $p1: 30px;
+  $p2: 30px;
+  $margin: 20px;
+
+  @include card($width,auto,$p1,$p2);
+
+  .card__text {
+    margin-top: $margin;
+    p {
+      @include cardText(26px,35px);
+      max-height: 180px;
+    }
+  }
+
+  .card__bottom {
+    margin-top: $margin;
+  }
+
+  //@media screen and (max-width: $lg-point){
+  //  padding-left: $p2/2;
+  //  padding-right: $p2/2;
+  //}
+
+  @media screen and (max-width: $sm-point){
+    //height: 280px;
+
+    padding-left: $p2/2;
+    padding-right: $p2/2;
+
+    .card__text {
+      margin-top: 15px;
+      p {
+        @include cardText(22px,30px);
+        max-height: 120px;
+      }
+    }
+
+    .card__bottom {
+      margin-top: 15px;
+    }
+  }
+}

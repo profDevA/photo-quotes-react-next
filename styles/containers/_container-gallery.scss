@@ -1,0 +1,154 @@
+.gallery-container {
+  margin-left: -80px;
+  margin-right: -80px;
+  .gallery-col {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 80px;
+    padding-right: 80px;
+
+    .gallery-item {
+      position: relative;
+      width: 100%;
+      cursor: pointer;
+
+      &:hover {
+        .gallery-info {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      .gallery-info {
+        transition: all .3s ease-in;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        visibility: visible;
+        opacity: 0;
+
+        font-size: 14px;
+        color: #2F343B;
+        letter-spacing: 2px;
+        line-height: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        writing-mode: vertical-lr;
+        transform: translateX(50%);
+      }
+
+      &:not(:first-child) {
+        margin-top: 200px;
+      }
+
+      &:nth-child(even) {
+        img {
+          margin-left: auto;
+        }
+      }
+    }
+
+    &:last-child {
+      .gallery-item {
+        .gallery-info {
+          transform: translateX(-150%);
+          left: 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    .gallery-col {
+      padding-left: 40px;
+      padding-right: 40px;
+
+      .gallery-item {
+        .gallery-info {
+          display: block;
+          opacity: 1;
+          writing-mode: initial;
+          top: unset !important;
+          left: 50% !important;
+          transform: translateX(-50%) !important;
+        }
+
+        &:not(:first-child) {
+          margin-top: 100px;
+        }
+      }
+
+      &:last-child {
+        .gallery-item {
+          margin-top: 100px!important;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $sm-point){
+    margin-left: 20px;
+    margin-right: 20px;
+
+    .gallery-col {
+      padding-left: 0;
+      padding-right: 0;
+
+      .gallery-item {
+        img {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        &:not(:first-child) {
+          margin-top: 50px;
+        }
+      }
+
+      &:last-child {
+        .gallery-item {
+          margin-top: 50px!important;
+        }
+      }
+
+    }
+  }
+
+  @media screen and (max-width: $xs-point){
+    .gallery-col {
+      .gallery-item {
+        img {
+          max-width: 500px;
+        }
+      }
+
+    }
+  }
+
+  @media screen and (max-width: $xxs-point){
+    .gallery-col {
+      .gallery-item {
+        img {
+          max-width: 450px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 380px){
+    .gallery-col {
+      .gallery-item {
+        img {
+          max-width: 400px;
+        }
+      }
+    }
+  }
+
+}

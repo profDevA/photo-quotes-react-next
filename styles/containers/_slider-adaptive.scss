@@ -1,0 +1,39 @@
+@mixin calcSlide($width) {
+  $coef: 700/$width;
+  margin-right: 60/$coef;
+  max-width: $width;
+}
+
+.slider-blog, .slider-dayquotes  {
+    width: 100vw;
+    display: flex;
+
+    .slider-item-blog, .slider-item-dq {
+      @include calcSlide(600px);
+    }
+
+  @media screen and (max-width: $sm-point){
+    .slider-item-blog, .slider-item-dq {
+      @include calcSlide(510px);
+    }
+  }
+
+  @media screen and (max-width: $xs-point){
+    .slider-item-blog, .slider-item-dq {
+      @include calcSlide(400px);
+    }
+  }
+
+  @media screen and (max-width: $xxs-point){
+    .slider-item-blog, .slider-item-dq {
+      @include calcSlide(300px);
+    }
+  }
+
+  @media screen and (max-width: 360px){
+    .slider-item-blog, .slider-item-dq {
+      @include calcSlide(290px);
+    }
+  }
+}
+

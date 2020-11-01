@@ -1,0 +1,55 @@
+.big-card {
+  $width: 700px;
+  $height: 480px;
+  $p1: 45px;
+  $p2: 60px;
+  $margin: 35px;
+
+  $font: 40px;
+  $line: 50px;
+
+  @include card($width,$height,$p1,$p2);
+
+  .card__text {
+    margin-top: $margin;
+
+    p {
+      @include cardText($font,$line);
+      max-height: 250px;
+      cursor: pointer;
+    }
+  }
+
+  .card__bottom {margin-top: $margin;}
+
+  @media (max-width: $lg-point){
+    $coef: $width/600px;
+    @include countCard($width,$height,$margin,$p1,$p2,600px);
+
+    .card__text {
+      p {
+        @include cardText($font/$coef,$line/$coef);
+        max-height: 250px/$coef;
+      }
+    }
+  }
+
+  @media (max-width: $sm-point){
+    $height: 280px;
+    $p1: 30px;
+    $p2: 15px;
+    $margin: 15px;
+
+    @include card($width,$height,$p1,$p2);
+
+    .card__bottom {margin-top: $margin;}
+
+    .card__text {
+      margin-top: $margin;
+      p {
+        @include cardText(22px,30px);
+        max-height: 120px;
+      }
+    }
+  }
+}

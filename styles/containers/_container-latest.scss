@@ -1,0 +1,31 @@
+.container-latest {
+  [class^="col-"]:last-child {
+    padding-left: 55px;
+  }
+  [class^="col-"]:first-child {
+    padding-right: 55px;
+  }
+
+  @media (max-width: $lg-point){
+    [class^="col-"]:last-child {
+      padding-left: 30px;
+    }
+    [class^="col-"]:first-child {
+      padding-right: 30px;
+    }
+  }
+
+  @media (max-width: $md-point){
+    [class^="col-"]:last-child {
+      padding-left: 0;
+
+      .quote:first-child {
+        margin-top: 40px!important;
+      }
+    }
+    [class^="col-"]:first-child {
+      padding-right: 0;
+    }
+
+  }
+}

@@ -1,0 +1,40 @@
+.books-container {
+    margin-left: -20px;
+    margin-right: -20px;
+    [class^="col-"] {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    @media (min-width: 992px){
+        margin-left: -10px;
+        margin-right: -10px;
+        [class^="col-"] {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+    }
+
+    @media (max-width: $md-point){
+        [class^="col-"]:nth-child(3), [class^="col-"]:nth-child(4){
+            margin-top: 30px;
+        }
+    }
+
+    @media (max-width: $sm-point){
+        [class^="col-"]:nth-child(3),[class^="col-"]:nth-child(4){
+            margin-top: 30px;
+        }
+
+        [class^="col-"] {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: $xs-point){
+        [class^="col-"]:not(:first-child) {
+            margin-top: 30px;
+        }
+    }
+}

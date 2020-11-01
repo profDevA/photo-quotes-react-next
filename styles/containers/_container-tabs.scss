@@ -1,0 +1,178 @@
+.tab-content {
+  padding-top: 80px;
+  padding-bottom: 70px;
+
+  &__p0 {
+    padding: 0!important;
+  }
+
+  @media screen and (max-width: $sm-point){
+    padding-top: 15px;
+    padding-bottom: 60px;
+  }
+}
+
+.authors-filter__alpha {
+  .tab {
+    &:not(:last-child) {
+      margin-right: 25px!important;
+    }
+  }
+
+  @media screen and (max-width: $lg-point){
+    .tab {
+      &:not(:last-child) {
+        margin-right: 15px!important;
+      }
+    }
+  }
+
+  @media screen and (max-width: $md-point){
+    .tab {
+      &-item {
+        font-size: 30px!important;
+      }
+    }
+  }
+
+  @media screen and (max-width: $sm-point){
+    flex-wrap: nowrap!important;
+    overflow-x: scroll;
+  }
+
+}
+
+.tab-title {
+  opacity: 0;
+  height: 0;
+  visibility: hidden;
+  transition: opacity .3s ease-in;
+  &__active {
+    opacity: 1;
+    height: auto;
+    visibility: visible;
+  }
+}
+
+.tabs-container {
+  padding-top: 80px;
+
+  .tab {
+    display: flex;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+
+    &:hover {
+      .tab-item, .tab-item__counter {
+        color: $blue;
+
+      }
+    }
+
+    &-item {
+      color:$tab-gray;
+      line-height: 70px;
+      text-transform: capitalize;
+      transition: all .3s ease-in-out;
+
+      &__counter {
+        line-height: 70px;
+        font-size: 30px;
+        font-family: 'Grotzec', sans-serif;
+        font-weight: 600;
+        margin-top: -14px;
+        color:$tab-gray;
+        margin-left: 10px;
+        transition: all .3s ease-in-out;
+      }
+
+      &__counter-big {
+        font-size: 40px;
+        line-height: 60px;
+      }
+    }
+
+    &__active {
+      .tab-item, .tab-item__counter {
+        color: $dark-gray;
+      }
+    }
+  }
+
+  @media screen and (max-width: $md-point){
+    padding-top: 60px;
+    .tab {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+
+      .main-title {
+        font-size: 70px;
+        line-height: 75px;
+      }
+
+      &-item {
+        font-size: 35px;
+
+        &__counter {
+         font-size: 20px;
+        }
+
+        &__counter-big {
+          font-size: 30px;
+          line-height: 50px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $sm-point){
+    padding-top: 30px;
+    .tab {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+
+      .main-title {
+        font-size: 60px;
+        line-height: 65px;
+      }
+
+      &-item {
+        font-size: 25px;
+
+        &__counter {
+          font-size: 15px;
+          margin-left: 5px;
+        }
+
+        &__counter-big {
+          font-size: 25px;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $xs-point){
+    flex-wrap: nowrap!important;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    .tab {
+      .main-title {
+        font-size: 40px;
+        line-height: 50px;
+      }
+      &-item {
+        &__counter-big {
+          font-size: 20px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}

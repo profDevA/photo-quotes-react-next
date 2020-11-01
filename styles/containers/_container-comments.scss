@@ -1,0 +1,150 @@
+.comments-container {
+  width: 100%;
+  .comments-title {
+    display: flex;
+
+    &__item {
+      color: $dark-gray;
+      line-height: 70px;
+    }
+
+    &__counter {
+      line-height: 70px;
+      font-size: 30px;
+      font-family: 'Grotzec', sans-serif;
+      font-weight: 600;
+      margin-top: -14px;
+      color: $dark-gray;
+      margin-left: 10px;
+    }
+  }
+
+  .comment {
+
+    &__second {
+      margin-left: 100px;
+    }
+
+    margin-top: 50px;
+
+    &__user {
+      margin-top: 30px;
+    }
+
+    &__person {
+      max-width: 60px;
+      img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+      }
+    }
+
+    &__right {
+      padding-left: 40px;
+    }
+
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+      align-items: center;
+    }
+
+    &__footer {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+
+      .reply-text {
+        cursor: pointer;
+      }
+    }
+
+    &__icons {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .liked-item {
+      .counter__comments {
+        color: $pink;
+      }
+
+      .like {
+        background-image: url("/assets/icons/heart-fill.svg");
+      }
+    }
+  }
+
+  @media screen and (max-width: $sm-point){
+
+    .comment {
+      &__right {
+        padding-left: 20px;
+      }
+
+      &__second {
+        margin-left: 80px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $xs-point){
+    .comment {
+      margin-top: 30px;
+
+      &__info {
+        p:last-child {
+          margin-top: 8px;
+        }
+      }
+
+      .text20 {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      &__right {
+        padding-left: 10px;
+      }
+      &__second {
+        margin-left: 40px;
+      }
+
+      &__text, &__footer {
+        margin-left: -40px;
+      }
+
+      &__info {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 10px;
+      }
+
+      &__person {
+        max-width: 30px;
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      &__footer {
+        margin-top: 12px;
+      }
+
+      &__user {
+        margin-bottom: 40px;
+        .comment__person {
+          display: none;
+        }
+
+        .comment__right {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}

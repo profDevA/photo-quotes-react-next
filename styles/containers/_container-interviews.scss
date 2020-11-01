@@ -1,0 +1,42 @@
+.interviews-container {
+  margin-left: -50px;
+  margin-right: -50px;
+  [class^="col"] {
+    padding-left: 50px;
+    padding-right: 50px;
+    .interview {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: $lg-point){
+    margin-left: -40px;
+    margin-right: -40px;
+    [class^="col"] {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+  }
+
+  @media screen and (max-width: $md-point){
+    [class^="col"]:first-child {
+      .interview {
+        &:first-child {
+          margin-top: 0!important;
+        }
+      }
+    }
+
+    [class^="col"]:last-child {
+      .interview {
+        &:first-child {
+          margin-top: 60px;
+        }
+      }
+    }
+  }
+
+}

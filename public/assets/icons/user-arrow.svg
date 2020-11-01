@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="5px" viewBox="0 0 8 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="icons/Avatar" transform="translate(-38.000000, -22.000000)" fill-rule="nonzero" stroke="#2F343B" stroke-width="2">
+            <g id="icons/Log-in" transform="translate(-7.000000, 5.000000)">
+                <polyline id="Path" points="46 18 49 20 52 18"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,103 @@
+@mixin calcSlide($width) {
+  $coef: 700/$width;
+  margin-right: 60/$coef;
+  max-width: $width;
+}
+
+.hero-slider {
+  //position: absolute;
+  top:0;left:0;
+  width: 100vw;
+  display: flex;
+
+  .image-card {
+    margin-right: 60px;
+  }
+
+  .next-arrow {
+    position: absolute;
+    top:50%;
+    left: 720px;
+    transform: translate(0,-50%);
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all .3s ease;
+
+    &::before {
+      font-size: 10px;
+      color: $dark-gray;
+      transform: translate(-50%, -50%);
+    }
+
+    &:hover {
+      box-shadow: 0 10px 20px 0 rgba(0,0,0,0.15);
+    }
+  }
+
+  .prev-arrow {
+    position: absolute;
+    top:50%;
+    left: 0;
+    transform: translate(-50%,-50%);
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: opacity .3s ease-in;
+    z-index: 5;
+
+    &::before {
+      font-size: 10px;
+      color: $dark-gray;
+      transform: rotate(180deg) translate(50%, 50%);
+    }
+
+    &:hover {
+      box-shadow: 0 10px 20px 0 rgba(0,0,0,0.15);
+    }
+  }
+
+  @media (max-width: $lg-point){
+    $width: 600px;
+    $coef: 700/$width;
+
+    .next-arrow {
+      left: 560px;
+    }
+
+    .image-card {
+      margin-right: 60/$coef;
+    }
+  }
+
+  @media (max-width: $md-point){
+    position: relative;
+  }
+
+  @media screen and (max-width: $sm-point){
+    .image-card {
+      @include calcSlide(500px);
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+ /* @media (max-width: $xs-point){
+    .image-card {
+      @include calcSlide(400px);
+    }
+  }
+
+  @media (max-width: $xxs-point){
+    .image-card {
+      @include calcSlide(300px);
+    }
+  }*/
+}
+

@@ -1,0 +1,120 @@
+.quote {
+  //max-width: 500px;
+  width: 100%;
+  margin-top: 80px;
+
+  padding-bottom: 22px;
+  border-bottom: $light-gray 1px solid;
+
+  p {
+    color: $dark-gray;
+  }
+
+  &__center, &__bottom {
+    margin-top: 20px;
+  }
+
+  &__meta {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__center {
+    p {
+      font-size: 26px;
+      line-height: 35px;
+      font-weight: bold;
+      //cursor: pointer;
+    }
+
+    .big-text {
+      font-size: 40px;
+      line-height: 60px;
+    }
+  }
+
+  &__bottom {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .quote-author {
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      color: $dark-gray;
+      transition: all .3s ease;
+
+      &:hover {
+        opacity: .6;
+        color: $dark-gray;
+      }
+    }
+
+    [class^="icon-"]::before, [class*=" icon-"]::before {
+      color: $gray;
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      .counter {
+        color: $dark-gray;
+      }
+
+      span:not(:last-child) {
+        margin-right: 30px;
+      }
+
+      span {
+        cursor: pointer;
+      }
+
+      .icon-comment {
+        margin-top: 2px;
+      }
+
+      .icon-comment::before {
+        font-size: 18px;
+      }
+
+      .icon-share::before {
+        font-size: 20px;
+      }
+
+      .icon-heart::before {
+        font-size: 17px;
+      }
+    }
+  }
+
+  &__meta {
+
+    p {
+      font-size: 13px;
+      line-height: 20px;
+
+      span {
+        color: $blue!important;
+      }
+    }
+  }
+
+  @media screen and (max-width: $sm-point){
+    margin-top: 40px;
+
+    &__center {
+      p {
+        font-size: 22px;
+        line-height: 30px;
+      }
+
+      .big-text {
+        font-size: 26px;
+        line-height: 35px;
+      }
+    }
+  }
+}

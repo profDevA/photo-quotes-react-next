@@ -1,0 +1,87 @@
+.list-links__gray {
+  margin-top: 44px;
+  margin-bottom: 34px;
+
+  li {
+    cursor: pointer;
+    a {
+      font-size: 18px;
+      color: $gray;
+      line-height: 50px;
+      transition: all .3s ease;
+    }
+
+    &:hover {
+      a {
+        color: $blue;
+      }
+    }
+  }
+
+  @media screen and (max-width: $sm-point){
+    margin-top: 26px;
+    margin-bottom: 26px;
+    li a {
+      font-size: 15px;
+      line-height: 36px;
+    }
+  }
+
+}
+
+.hash__hover {
+  li {
+    display: block;
+    position: relative;
+
+    &::before {
+      content: url("/assets/icons/hash.svg");
+      position: absolute;
+      top:50%;
+      left: -6px;
+      transform: translate(-100%, -40%);
+      opacity: 0;
+      transition: opacity .3s ease;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1!important;
+      }
+    }
+  }
+}
+
+.list-links__white {
+  li a {
+    font-size: 18px;
+    color: #fff;
+    line-height: 50px;
+    transition: all .3s ease;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  @media screen and (max-width: $lg-point) {
+    li a {
+      font-size: 14px;
+      line-height: 36px;
+    }
+  }
+
+  @media screen and (max-width: $xxs-point) {
+    li a {
+      font-size: 16px;
+      line-height: 50px;
+    }
+  }
+}
+
+.authors-list {
+  @media screen and (min-width: 381px) and (max-width: $md-point){
+    display: flex;
+    justify-content: center;
+  }
+}

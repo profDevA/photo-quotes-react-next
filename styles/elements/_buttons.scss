@@ -1,0 +1,160 @@
+.tag {
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-right: 10px;
+
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+
+  display: inline-block;
+
+  &__white {
+    color: #fff;
+    background-color: rgba(255, 255, 255, .3);
+  }
+
+  &__blue {
+    color: $blue;
+    background-color: $light-blue;
+  }
+}
+
+.btn {
+  padding: 20px 50px;
+  border-radius: 2px;
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.btn-footer {
+  height: 100%;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  padding: 15px 40px;
+  color: #fff;
+  transition: all .3s ease-in;
+
+  @media screen and (max-width: $sm-point){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@keyframes rotate {
+  0%{ transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -55%) rotate(180deg); }
+}
+
+
+.refresh-btn {
+  background-color: $lighter-gray;
+  border-radius: 2px;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform .3s ease;
+
+  &::after {
+    content: url("/assets/icons/refresh.svg");
+    position: absolute;
+    top: 50%; left:50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    &::after {
+      animation: rotate .5s linear;
+    }
+  }
+}
+
+.btn__dark-blue {
+  background-color: #3B5B98;
+}
+
+.btn__blue-gradient {
+  background-size: 200% auto;
+  background-image: linear-gradient(to right, #40B9F2 0%, #4091F2 50%, #40B9F2 100%);
+  transition: 0.5s;
+
+  &:hover {
+    background-position: right center;
+  }
+}
+
+.btn__pink-gradient {
+  background-image: linear-gradient(140deg, #D848B3 0%, #F27786 100%);
+  transition: background .4s ease;
+
+  &:hover {
+    background-image: linear-gradient(140deg, #F27786 0%, #D848B3 100%);
+  }
+}
+
+.like {
+  transition: all .3s ease;
+  width: 21px;
+  height: 19px;
+  background-position: center;
+}
+
+.like-gray {
+  background-image: url("/assets/icons/heart-outline.svg");
+  &:hover {
+    background-image: url("/assets/icons/heart-fill.svg");
+  }
+}
+
+.like-white {
+  background-image: url("/assets/icons/heart-outline-white.svg");
+  &:hover {
+    background-image: url("/assets/icons/heart-fill.svg");
+  }
+}
+
+.outline-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $light-gray;
+  border-radius: 2px;
+  padding: 20px 50px;
+  width: 100%;
+  color: $dark-gray;
+  text-align: center;
+
+  span {
+    margin-right: 20px;
+  }
+
+  .icon-share {
+    color: $gray;
+    font-size: 17px;
+  }
+
+  &:hover {
+    color: $gray;
+    .like-gray {
+      background-image: url("/assets/icons/heart-fill.svg");
+    }
+  }
+
+  @media screen and (max-width: $xs-point){
+    padding: 20px 25px;
+  }
+
+}
+
+.liked-btn {
+  border-color: $pink;
+  color: $pink;
+
+  .like-gray {
+    background-image: url("/assets/icons/heart-fill.svg");
+  }
+}

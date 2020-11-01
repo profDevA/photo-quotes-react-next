@@ -1,0 +1,32 @@
+@mixin card($width, $height, $p1, $p2){
+  max-width: $width;
+  width: 100%;
+  height: $height;
+  padding: $p1 $p2;
+
+  /*700px,480px,45px,60px*/
+}
+
+
+@mixin cardText($font,$line){
+  font-size: $font;
+  line-height: $line;
+}
+
+
+@mixin countCard($initW, $initH, $margin, $p1, $p2, $width) {
+  $coef: $initW/$width;
+  /*big card - 700,480,35,45,60,40,600*/
+
+  max-width: $width;
+  height: $initH/$coef;
+  padding: $p1/$coef $p2/$coef;
+
+  .card__text {
+    margin-top: $margin/$coef;
+  }
+
+  .card__bottom {
+    margin-top: $margin/$coef;
+  }
+}

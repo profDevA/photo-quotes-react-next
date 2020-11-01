@@ -1,0 +1,59 @@
+.nav-chain {
+  ul {
+    display: flex;
+    align-items: center;
+
+    .active {
+      a {
+        color: $dark-gray;
+      }
+    }
+
+    .separator {
+      display: flex;
+      justify-content: space-between;
+      width: 15px;
+      height: 3px;
+      span {
+        background-color: $gray;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+      }
+
+      span:not(:last-child) {
+        margin-right: 3px;
+      }
+    }
+
+    li {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+
+      a {
+        font-size: 14px;
+        color: $gray;
+        font-weight: 600;
+        line-height: 20px;
+      }
+
+    }
+
+  }
+
+  @media screen and (max-width: 420px){
+    overflow-x: scroll;
+    ul {
+      li {
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+
+        a{
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}

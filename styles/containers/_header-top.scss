@@ -1,0 +1,225 @@
+header {
+  background-color: #ffffff;
+  position: relative;
+  z-index: 5;
+}
+
+.header__fixed {
+  position: fixed;
+  z-index: 100;
+
+  @media screen and (max-width: $md-point){
+   position: relative;
+    .top-header__right {
+      .menu-icon {
+        span {
+          background-color: #fff !important;
+        }
+      }
+    }
+  }
+}
+
+body.scrolled .header__fixed  {
+  opacity: 0;
+  transition: opacity .3s ease;
+  visibility: hidden;
+}
+
+.header__transparent {
+  background-color: transparent!important;
+}
+
+.auth-user {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  cursor: pointer;
+  .circle-img {
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+  }
+
+  .auth-arrow {
+    transition: all .4s ease-in-out;
+  }
+
+  &:hover {
+    .auth-arrow {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.top-header__white {
+  .nav-links {
+    ul {
+      li {
+        a {
+          color: #fff!important;
+          &:hover {
+            opacity: .5;
+          }
+        }
+      }
+    }
+  }
+
+  .top-header__right {
+    .menu-icon {
+      span {
+        background-color: #fff!important;
+      }
+      &:hover {
+        span {
+          opacity: .5;
+        }
+      }
+    }
+
+    .icon-user {
+      color: #fff!important;
+      &:hover {
+        opacity: .5;
+      }
+    }
+  }
+}
+
+.top-header {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+
+  &__left {
+    img {
+      width: 143px;
+    }
+  }
+
+  .nav-links {
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+
+      li {
+        a {
+          text-decoration: none;
+          color: #2F343B;
+          font-weight: 700;
+          font-size: 18px;
+          transition: all .3s ease;
+
+          &:hover {
+            color: $blue;
+          }
+        }
+
+        &:not(:last-child) {
+          margin-right: 40px;
+        }
+      }
+    }
+
+    //TODO hover and active blue dot
+    .active-nav {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $blue;
+      bottom: -5px;
+      left:0;
+      transition: all .6s ease-in-out;
+      opacity: 0;
+      transform: translate(100%, 100%);
+    }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .menu-icon {
+      cursor: pointer;
+      height: 15px;
+
+      span {
+        width: 41px;
+        height: 2px;
+        background-color: $dark-gray;
+        display: block;
+        transition: all .3s ease;
+
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+
+      &:hover {
+        span {
+          background-color: $blue;
+        }
+      }
+    }
+
+    .icon-user {
+      font-size: 15px;
+      color: $dark-gray;
+      margin-right: 30px;
+      transition: all .3s ease;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+
+  @media screen and (max-width: $lg-point){
+    .nav-links {
+
+      ul {
+        li {
+          &:not(:last-child) {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $md-point){
+    .nav-links {
+      display: none!important;
+    }
+
+
+    &__right {
+
+      .menu-icon {
+        span {
+          width: 30px;
+          &:not(:last-child) {
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $xs-point){
+    &__left {
+      img {
+        width: 95px;
+      }
+    }
+
+  }
+}
+
+

@@ -1,0 +1,126 @@
+.book {
+  max-width: 260px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__cover {
+    position: relative;
+    display: inline-block;
+    height: 260px;
+    cursor: pointer;
+
+    img {
+      height: 260px;
+      //max-width: 260px;
+      width: 100%;
+    }
+
+    &:hover {
+      .cover__hover {
+       opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .cover__hover {
+    position: absolute;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease-in;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;left: 0;
+      background-image: linear-gradient(-140deg, #40B9F2 0%, #4091F2 100%);
+      opacity: .9;
+      width: 100%;
+      height: 100%;
+    }
+
+    &-text {
+      position: relative;
+      background-color: #fff;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        height: 35px;
+        margin-bottom: 12px;
+      }
+
+      p {
+        color: $dark-gray;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 16px;
+        max-width: 60px;
+        text-align: center;
+      }
+    }
+  }
+
+  &-top {
+    background-color: #fff;
+    border-radius: 2px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left:0;bottom: -30px;
+      background-color: #fff;
+      height: 30px;
+      width: 100%;
+      border-radius: 2px;
+      box-shadow: 0 30px 50px 0 rgba(47,52,59,0.1);
+    }
+
+  }
+
+  &-bottom {
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  &__name {
+    height: 70px;
+    margin-bottom: 15px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__number {
+    font-size: 14px;
+    color: $blue;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 11px;
+  }
+
+  &__author {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: $lg-point){
+    &__name {
+      height: 60px;
+    }
+  }
+}
