@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "noIndex": "npm run build && echo 'User-agent: *\nDisallow: /' > out/robots.txt"
+    "noIndex": "yarn run build && echo 'User-agent: *\nDisallow: /' > out/robots.txt && yarn run export"
   },
   "dependencies": {
     "animate.css": "3.7",

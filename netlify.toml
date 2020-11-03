@@ -1,7 +1,3 @@
-[build]
-  command = "yarn run build && yarn run export"
-  publish = "out"
-  
 [context.deploy-preview]
   command = "npm run noIndex"
 
