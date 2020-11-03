@@ -1,7 +1,9 @@
 [build]
   command = "yarn run build && yarn run export"
   publish = "out"
-[[redirects]]
-  from = "/*"
-  to = "/"
-  status = 200
+  
+[context.deploy-preview]
+  command = "npm run noIndex"
+
+[context.branch-deploy]
+  command = "npm run noIndex"
