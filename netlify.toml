@@ -1,3 +1,3 @@
 [build]
-  command = "yarn run noIndex"
+  command = "yarn run build && yarn run export"
   publish = "out"

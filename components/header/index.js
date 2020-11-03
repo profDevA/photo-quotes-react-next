@@ -8,6 +8,7 @@ const Header = () => {
     return (
         <>
             <Head>
+                <meta name="robots" content="noindex" />
                 <title>Photo Quotes</title>
                 <link rel="icon" href="/favicon.png" />
             </Head>
@@ -16,7 +17,7 @@ const Header = () => {
                     <div className="top-header">
                         <div className="top-header__left">
                             <a href="index.html">
-                                
+
                             </a>
                         </div>
                         <Menu />
