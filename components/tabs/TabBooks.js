@@ -1,6 +1,6 @@
-export default function TabBooks() {
+export default function TabBooks(props) {
     return (
-        <section className="container tab-content" id="tab-2">
+        <section className="container tab-content" id="tab-2" style={props.active ? { display: 'block' } : { display: 'none' }}>
             <div className="row books-container justify-content-between">
                 <div className="col-lg-3 col-sm-6 col-12">
                     <div className="book">

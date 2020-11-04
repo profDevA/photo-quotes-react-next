@@ -1,4 +1,5 @@
 
+import {useState} from 'react'
 import Head from 'next/head';
 import Image from 'next/image';
 import Menu from '../components/menu';
@@ -10,6 +11,14 @@ import TabGallery from '../components/tabs/TabGallery'
 import TabInterviews from '../components/tabs/TabInterviews'
 
 export default function Search() {
+    const [activeTabId, setActiveTabId] = useState(1);
+    const [tabs, setTabs] = useState([
+        'Quotes', 'Books', 'Interviews', 'Articles', 'Gallery'
+    ]);
+    const onClick = (id) => {
+        console.log(id);
+        setActiveTabId(id);
+    }
     return (
         <>
             <Head>
@@ -49,40 +58,23 @@ export default function Search() {
                 </section>
                 <section className="container">
                     <div className="row tabs-container">
-                        <div className="tab" data-tab="tab-1">
-                            <h3 className="tab-item">Quotes</h3>
-                            <span className="tab-item__counter">21</span>
-                        </div>
-                        <div className="tab" data-tab="tab-2">
-                            <h3 className="tab-item">Books</h3>
-                            <span className="tab-item__counter">11</span>
-                        </div>
-                        <div className="tab" data-tab="tab-3">
-                            <h3 className="tab-item">Interviews</h3>
-                            <span className="tab-item__counter">6</span>
-                        </div>
-                        <div className="tab" data-tab="tab-4">
-                            <h3 className="tab-item">Articles</h3>
-                            <span className="tab-item__counter">19</span>
-                        </div>
-                        <div className="tab" data-tab="tab-5">
-                            <h3 className="tab-item">Gallery</h3>
-                            <span className="tab-item__counter">16</span>
-                        </div>
+                        {
+                            tabs.map((tab, i) => {
+                                return(
+                                    <div key={i} className={activeTabId == i +1 ? "tab tab__active" : "tab"} data-tab="tab-1" onClick={() => onClick(i + 1)}>
+                                        <h3 className="tab-item">{tab}</h3>
+                                        <span className="tab-item__counter">21</span>
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
                 </section>
-                <TabQuotes />
-                <TabBooks />
-                <TabArticles />
-                <TabGallery />
-                <TabInterviews />
-                {/* 
-                //= templates/_tab-quotes.html
-                //= templates/_tab-books.html
-                //= templates/_tab-interviews.html
-                //= templates/_tab-articles.html
-                //= templates/_tab-gallery.html */}
-
+                <TabQuotes active={activeTabId == 1 ? true : false} />
+                <TabBooks active={activeTabId == 2 ? true : false} />
+                <TabArticles active={activeTabId == 3 ? true : false} />
+                <TabGallery active={activeTabId == 4 ? true : false} />
+                <TabInterviews active={activeTabId == 5 ? true : false} />
                 <section className="container-fluid gray-gradient">
                     <div className="row container ptb110">
                         <div className="col-xl-2 col-6 container-links wow fadeInUp">

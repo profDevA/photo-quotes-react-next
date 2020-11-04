@@ -1,8 +1,16 @@
+import Slider from "react-slick"
 import Header from '../components/header'
 import Footer from '../components/footer'
 import HeroSection from '../components/hero-section'
 
 export default function Home() {
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1
+  };
   return (
     <>
       <section className="hero-bg hero-bg__white">
@@ -267,51 +275,53 @@ export default function Home() {
               </div>
             </div>
             <div className="row mt80">
-              <div className="col-4">
-                <div className="article slider-item-blog wow fadeInUp">
-                  <img src="/assets/art1.jpg" alt="" />
-                  <div className="article-top">
-                    <a className="article-top__title title" href="#">
-                      How to Make Time to Make Things
+              {/* <Slider {...sliderSettings}> */}
+                <div className="col-4">
+                  <div className="article slider-item-blog wow fadeInUp">
+                    <img src="/assets/art1.jpg" alt="" />
+                    <div className="article-top">
+                      <a className="article-top__title title" href="#">
+                        How to Make Time to Make Things
                             </a>
-                  </div>
-                  <div className="article-content">
-                    <p className="article-content__text text18">
-                      We live our lives on different clocks — biological, cultural, personal, and more. There are things we have to do and … things we want to do
+                    </div>
+                    <div className="article-content">
+                      <p className="article-content__text text18">
+                        We live our lives on different clocks — biological, cultural, personal, and more. There are things we have to do and … things we want to do
                             </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="col-4">
-                <div className="article slider-item-blog wow fadeInUp" data-wow-delay=".2s">
-                  <img src="/assets/art2.jpg" alt="" />
-                  <div className="article-top">
-                    <a className="article-top__title title" href="#">
-                      The Domestication of Cryptocurrency
+                <div className="col-4">
+                  <div className="article slider-item-blog wow fadeInUp" data-wow-delay=".2s">
+                    <img src="/assets/art2.jpg" alt="" />
+                    <div className="article-top">
+                      <a className="article-top__title title" href="#">
+                        The Domestication of Cryptocurrency
                             </a>
-                  </div>
-                  <div className="article-content">
-                    <p className="article-content__text text18">
-                      During the internet’s nascent life, a lot of researchers, early adopters, and enthusiasts recognized that the technology would pose serious problems for acting anonymously online. The very nature of internet infrastructure is problematic for
+                    </div>
+                    <div className="article-content">
+                      <p className="article-content__text text18">
+                        During the internet’s nascent life, a lot of researchers, early adopters, and enthusiasts recognized that the technology would pose serious problems for acting anonymously online. The very nature of internet infrastructure is problematic for
                             </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="col-4">
-                <div className="article slider-item-blog wow fadeInUp" data-wow-delay=".4s">
-                  <img src="/assets/art3.jpg" alt="" />
-                  <div className="article-top">
-                    <a className="article-top__title title" href="#">
-                      What’s so Special About Google’s Pixel 3?
+                <div className="col-4">
+                  <div className="article slider-item-blog wow fadeInUp" data-wow-delay=".4s">
+                    <img src="/assets/art3.jpg" alt="" />
+                    <div className="article-top">
+                      <a className="article-top__title title" href="#">
+                        What’s so Special About Google’s Pixel 3?
                             </a>
-                  </div>
-                  <div className="article-content">
-                    <p className="article-content__text text18">
-                      Google is about to drop several new products on us, but we’re still not sure if its strategy makes sense
+                    </div>
+                    <div className="article-content">
+                      <p className="article-content__text text18">
+                        Google is about to drop several new products on us, but we’re still not sure if its strategy makes sense
                             </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              {/* </Slider> */}
             </div>
             <div className="row container-more container-more__hide">
               <a href="#" className="wide-text btn btn__blue-gradient">More articles</a>

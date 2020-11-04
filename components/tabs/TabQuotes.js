@@ -1,6 +1,6 @@
-export default function TabQutoes() {
+export default function TabQutoes(props) {
     return (
-        <section className="container tab-content container-latest" id="tab-1">
+        <section className="container tab-content container-latest" id="tab-1" style={props.active?{display:'block'}:{display:'none'}}>
             <div className="row pb80 justify-content-md-between">
                 <div className="col-12 col-lg-6 wow fadeIn">
                     <div className="quote mt0">
@@ -49,7 +49,7 @@ export default function TabQutoes() {
                         </div>
                     </div>
                     <div className="banner-container banner-container-300">
-                        <img src="assets/google-300.jpg" alt="" className="banner-300" />
+                        <img src="assets/google-300.jpg" alt="" className="banner-3000" />
                     </div>
                     <div className="quote">
                         <div className="quote__top">

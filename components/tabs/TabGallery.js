@@ -1,6 +1,6 @@
-export default function TabGallery() {
+export default function TabGallery(props) {
     return (
-        <section className="tab-content" id="tab-5">
+        <section className="tab-content" id="tab-5" style={props.active?{display:'block'}:{display:'none'}}>
             <div className="row gallery-container">
                 <div className="col-md-6 col-12 gallery-col">
                     <div className="gallery-item">

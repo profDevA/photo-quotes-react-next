@@ -1,14 +1,16 @@
 .hero-section__white {
   justify-content: space-between;
+
   .hero-section__left {
     &_bottom {
       p {
-        color: #fff!important;
+        color: #fff !important;
       }
     }
 
     .author-info {
       margin-top: 30px;
+
       p {
         font-size: 18px;
         color: #fff;
@@ -17,14 +19,16 @@
   }
 
   .hero-section__right {
-    margin-left: 0!important;
+    margin-left: 0 !important;
     display: flex;
     justify-content: flex-end;
     padding-left: 20px;
+
   }
 
-  .big-lettering, h1 {
-    color: #fff!important;
+  .big-lettering,
+  h1 {
+    color: #fff !important;
   }
 
   .big-lettering {
@@ -32,7 +36,7 @@
     line-height: 100px;
   }
 
-  @media screen and (max-width: $lg-point){
+  @media screen and (max-width: $lg-point) {
     .hero-section__left {
       .author-info {
         margin-top: 20px;
@@ -40,14 +44,14 @@
     }
   }
 
-  @media screen and (max-width: $md-point){
+  @media screen and (max-width: $md-point) {
     .hero-section__right {
       justify-content: flex-start;
       padding-left: 0;
     }
   }
 
-  @media screen and (max-width: $xs-point){
+  @media screen and (max-width: $xs-point) {
     .big-lettering {
       font-size: 88px;
       line-height: 90px;
@@ -61,6 +65,7 @@
 
   position: relative;
   z-index: 5;
+
   &__left {
     display: flex;
     flex-direction: column;
@@ -90,11 +95,67 @@
   &__right {
     position: relative;
     margin-left: 40px;
+
+    .carousel {
+      .carousel__arrow-button {
+        width: 80px;
+        height: 80px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+        transition: all .3s ease;
+
+        &::before {
+          font-size: 10px;
+          color: $dark-gray;
+          transform: translate(-50%, -50%);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          content: '\e90e';
+        }
+
+        @media (max-width: $sm-point) {
+          display: none;
+        }
+      }
+
+      .carousel__back-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -40px;
+        &::before {
+          transform: rotate(180deg) translate(50%, 50%);;
+        }
+      }
+
+      .carousel__next-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 30px;
+      }
+
+      .carousel__dot {
+        background: #2f343b;
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        border-radius: 50%;
+        display: none;
+        @media (max-width: $sm-point) {
+          display: inline;
+        }
+      }
+    }
   }
 
-  @media screen and (max-width: $lg-point){
+  @media screen and (max-width: $lg-point) {
     $coef: 700/600;
-    &__left, &__right {
+
+    &__left,
+    &__right {
       height: 480px/$coef;
     }
 
@@ -105,6 +166,7 @@
 
   @media (max-width: $md-point) {
     height: auto;
+
     &__left {
       height: auto;
       margin-bottom: 60px;
@@ -114,12 +176,15 @@
       height: auto;
     }
 
-    .scroll-down {display: none}
+    .scroll-down {
+      display: none
+    }
   }
 
   @media (max-width: $sm-point) {
     min-height: 480px;
     height: 100%;
+
     &__left {
       margin-bottom: 40px;
     }
@@ -131,6 +196,7 @@
   50% {
     transform: translateY(-30%);
   }
+
   100% {
     transform: translateY(0%);
   }
@@ -147,21 +213,23 @@
     background-color: #fff;
     height: 100vh;
   }
-  
+
   &__author {
     background-image: url(/assets/author-bg.jpg);
     height: 100vh;
 
     &::before {
-      content:'';
+      content: '';
       background-color: $dark-gray;
       background-repeat: repeat-y;
       opacity: .5;
       width: 100%;
       height: 100%;
       position: absolute;
-      top: 0;bottom: 0;
-      right: 0;left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
     }
   }
 

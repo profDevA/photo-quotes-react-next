@@ -1,6 +1,6 @@
-export default function TabArticles() {
+export default function TabArticles(props) {
     return (
-        <section className="tab-content container container-blog" id="tab-4">
+        <section className="tab-content container container-blog" id="tab-4" style={props.active?{display:'block'}:{display:'none'}}>
             <div className="row">
                 <div className="col-xl-4 col-md-6">
                     <div className="article article__offset">

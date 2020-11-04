@@ -1,6 +1,6 @@
-export default function TabIntervies() {
+export default function TabIntervies(props) {
     return (
-        <section className="container tab-content" id="tab-3">
+        <section className="container tab-content" id="tab-3" style={props.active ? { display: 'block' } : { display: 'none' }}>
             <div className="row interviews-container">
                 <div className="col-12 col-lg-6">
                     <div className="interview row">

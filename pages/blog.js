@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Header from '../components/header/WhiteHeader'
 import Footer from '../components/footer'
 import Comments from '../components/comments';
@@ -5,7 +6,14 @@ import Comments from '../components/comments';
 export default function Blog() {
     return (
         <>
-            <Header />
+            <Head>
+                <meta name="robots" content="noindex" />
+                <title>Photo Quotes</title>
+                <link rel="icon" href="/favicon.png" />
+            </Head>
+            <section class="hero-bg" style={{ backgroundImage: "url('assets/blog-bg.jpg')" }}>
+                <Header />
+            </section>
             <main>
                 <section className="container inner-container pb160">
                     <div className="side-col-container side-col-container__inner row">
@@ -45,7 +53,7 @@ export default function Blog() {
                                     Marysa Labrone
                                 </p>
                                 <p className="text16 side-col-container__text">
-                                    The term ‘documentary’ is sometimes applied in a rather derogatory sense to the type of photography which to me seems logical. To connect the term ‘documentary’ with only the 'ash-can school' is so much sheer nonsense, and probably stems from the bad habit of pigeon-holing and labelling everything like the well-known 57 varieties. Actually, documentary pictures include every subject in the world––good, bad, indifferent. I have yet to see a fine photograph which is not a good document.                               
+                                    The term ‘documentary’ is sometimes applied in a rather derogatory sense to the type of photography which to me seems logical. To connect the term ‘documentary’ with only the 'ash-can school' is so much sheer nonsense, and probably stems from the bad habit of pigeon-holing and labelling everything like the well-known 57 varieties. Actually, documentary pictures include every subject in the world––good, bad, indifferent. I have yet to see a fine photograph which is not a good document.
                                 </p>
                                 <p className="text16 side-col-container__text">
                                     Branding is no longer simply about visual appeal (or the cherry in the apple pie example, as given in my earlier article). Unfortunately, many graphic design firms who position themselves as advertising agencies believe that branding your corporate identity is all about developing great looking visual solutions.

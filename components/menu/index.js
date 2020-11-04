@@ -3,11 +3,11 @@ import MenuItem from '../../components/menuItem';
 
 const Menu = () => {
     const [menuItems, setMenuItems] = useState([
-        { to: 'authors.html', menuTitle: 'Authors' },
-        { to: 'topics.html', menuTitle: 'Topics' },
-        { to: 'one-quote.html', menuTitle: 'Quote of the Day' },
-        { to: 'one-photo-quote.html', menuTitle: 'Photo Quotes' },
-        { to: 'blog.html', menuTitle: 'Blog' },
+        { to: '/authors', menuTitle: 'Authors' },
+        { to: '/topics', menuTitle: 'Topics' },
+        { to: '/one-quote', menuTitle: 'Quote of the Day' },
+        { to: '/one-photo-quote', menuTitle: 'Photo Quotes' },
+        { to: '/blogs', menuTitle: 'Blog' },
     ]);
     const [activeItemNum, setActiveItemNum] = useState(4);
 

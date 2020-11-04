@@ -16,8 +16,8 @@ const Header = () => {
                 <div className="container">
                     <div className="top-header">
                         <div className="top-header__left">
-                            <a href="index.html">
-
+                            <a href="/">
+                                <Image src="/assets/logo.png" alt="Logo" unsized />
                             </a>
                         </div>
                         <Menu />
