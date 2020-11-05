@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import '../styles/fonts.scss'
 import '../styles/lib/grid.css'
+import '../styles/lib/selectize.css'
 import 'animate.css/animate.min.css'
 import '../styles/style.scss'
 const isServer = typeof window === 'undefined'

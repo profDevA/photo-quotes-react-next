@@ -16,7 +16,6 @@ export default function Search() {
         'Quotes', 'Books', 'Interviews', 'Articles', 'Gallery'
     ]);
     const onClick = (id) => {
-        console.log(id);
         setActiveTabId(id);
     }
     return (
@@ -72,9 +71,9 @@ export default function Search() {
                 </section>
                 <TabQuotes active={activeTabId == 1 ? true : false} />
                 <TabBooks active={activeTabId == 2 ? true : false} />
-                <TabArticles active={activeTabId == 3 ? true : false} />
-                <TabGallery active={activeTabId == 4 ? true : false} />
-                <TabInterviews active={activeTabId == 5 ? true : false} />
+                <TabInterviews active={activeTabId == 3 ? true : false} />
+                <TabArticles active={activeTabId == 4 ? true : false} />
+                <TabGallery active={activeTabId == 5 ? true : false} />
                 <section className="container-fluid gray-gradient">
                     <div className="row container ptb110">
                         <div className="col-xl-2 col-6 container-links wow fadeInUp">

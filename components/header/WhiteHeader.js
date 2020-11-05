@@ -9,9 +9,9 @@ export default function WhiteHeader() {
             <div className="container">
                 <div className="top-header__white top-header">
                     <div className="top-header__left">
-                        <a href="index.html">
+                        <a href="/">
                             <Image
-                                src="/assets/logo.png"
+                                src="/assets/logo-white.png"
                                 alt="Logo Image"
                                 unsized
                             />
