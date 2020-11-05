@@ -17,7 +17,7 @@ const Header = () => {
                     <div className="top-header">
                         <div className="top-header__left">
                             <a href="/">
-                                <Image src="/assets/logo.png" alt="Logo" unsized />
+                                <Image src="assets/logo.png" alt="Logo" unsized />
                             </a>
                         </div>
                         <Menu />
