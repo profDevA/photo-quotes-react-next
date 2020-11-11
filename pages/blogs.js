@@ -1,51 +1,34 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import Article from '../components/article';
 
-const Blogs = () => {
-    const [articles, setArticles] = useState([
-        {
-            articleImage: '/assets/art2.jpg',
-            articleTitle: 'How to Make Time to Make Things',
-            articleContent: 'We live our lives on different clocks — biological, cultural, personal, and more. There are things we have to do and … things we want to do'
-        },
-        {
-            articleImage: '/assets/art3.jpg',
-            articleTitle: 'How to Make Time to Make Things',
-            articleContent: 'We live our lives on different clocks — biological, cultural, personal, and more. There are things we have to do and … things we want to do'
-        },
-        {
-            articleImage: '/assets/art4.jpg',
-            articleTitle: 'How to Make Time to Make Things',
-            articleContent: 'We live our lives on different clocks — biological, cultural, personal, and more. There are things we have to do and … things we want to do'
-        },
-        {
-            articleImage: '/assets/art5.jpg',
-            articleTitle: 'How to Make Time to Make Things',
-            articleContent: 'We live our lives on different clocks — biological, cultural, personal, and more. There are things we have to do and … things we want to do'
-        },
-        {
-            articleImage: '/assets/art6.jpg',
-            articleTitle: 'How to Make Time to Make Things',
-            articleContent: 'We live our lives on different clocks — biological, cultural, personal, and more. There are things we have to do and … things we want to do'
-        },
-        {
-            articleImage: '/assets/art7.jpg',
-            articleTitle: 'How to Make Time to Make Things',
-            articleContent: 'We live our lives on different clocks — biological, cultural, personal, and more. There are things we have to do and … things we want to do'
-        },
-        {
-            articleImage: '/assets/art8.jpg',
-            articleTitle: 'How to Make Time to Make Things',
-            articleContent: 'We live our lives on different clocks — biological, cultural, personal, and more. There are things we have to do and … things we want to do'
-        },
-        {
-            articleImage: '/assets/art9.jpg',
-            articleTitle: 'How to Make Time to Make Things',
-            articleContent: 'We live our lives on different clocks — biological, cultural, personal, and more. There are things we have to do and … things we want to do'
-        },
-    ]);
+const SERVER_URI = process.env.SERVER_URI
+
+const Blogs = (props) => {
+    const [articles, setArticles] = useState();
+    const [page, setPage] = useState(1);
+
+    useEffect(() => {
+        setArticles(props.data);
+        setPage(props.current_page)
+        return () => {
+
+        };
+    }, []);
+
+    const getMoreArticles = async () => {
+        const res = await axios.get(SERVER_URI + '/api/articles?page=' + (page + 1));
+        console.log(res, '=============')
+        setPage(res.data.current_page)
+        setArticles(prevState => {
+            return [...prevState, ...res.data.data]
+        });
+    }
+
+    console.log(articles, 'apiurl')
+
     return (
         <>
             <Header />
@@ -57,11 +40,12 @@ const Blogs = () => {
                             <h1 className="mt30 main-title">About Photography</h1>
                         </div>
                         {
-                            articles.map((article, index) => <Article key={index} articleTitle={article.articleImg2} articleImage={article.articleImage} articleContent={article.articleContent} />)
+                            articles && articles.length > 0 &&
+                            articles.map((article, index) => <Article key={index} articleTitle={article.title} articleImage={SERVER_URI + article.url} articleContent={article.text} />)
                         }
                     </div>
                     <div className="row container-more">
-                        <a href="#" className="wide-text btn btn__blue-gradient">More articles</a>
+                        <a href="javascript:void(0)" className="wide-text btn btn__blue-gradient" onClick={() => getMoreArticles()} disabled={page === props.last_page ? true : false}>More articles</a>
                     </div>
                 </section>
             </main>
@@ -69,6 +53,13 @@ const Blogs = () => {
         </>
 
     )
+}
+
+export async function getStaticProps() {
+    const res = await axios.get(SERVER_URI + '/api/articles');
+    return {
+        props: res.data
+    }
 }
 
 export default Blogs;

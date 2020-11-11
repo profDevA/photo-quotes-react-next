@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FadeInDiv } from './style';
 
 const Article = (props) => {
-    useEffect(() => {
 
-    }, []);
     return (
         <div className="col-xl-4 col-md-6">
             <FadeInDiv>
