@@ -4,7 +4,7 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import Article from '../components/article';
 
-const SERVER_URI = process.env.SERVER_URI
+const SERVER_URI = process.env.NODE_ENV === 'development' ? process.env.DEV_SERVER_URI : process.env.PROD_SERVER_URI;
 
 const Blogs = (props) => {
     const [articles, setArticles] = useState();
@@ -28,6 +28,7 @@ const Blogs = (props) => {
     }
 
     console.log(articles, 'apiurl')
+    console.log(process.env.NODE_ENV, 'this is env')
 
     return (
         <>

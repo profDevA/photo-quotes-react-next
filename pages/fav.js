@@ -51,7 +51,7 @@ export default function Fav() {
                     </div>
                 </section>
 
-                <section className="container tab-content container-latest pt80" id="tab-1" style={tabStat !== 1 ? {display: 'none'} : {}}>
+                <section className="container tab-content container-latest pt80" id="tab-1" style={tabStat !== 1 ? { display: 'none' } : {}}>
                     <div className="row pb80 justify-content-md-between">
                         <div className="col-12 col-lg-6 wow zoomIn">
                             <div className="quote mt0">
@@ -194,7 +194,7 @@ export default function Fav() {
                         </div>
                     </div>
                 </section>
-                <section className="container tab-content container-latest pt80" id="tab-2" style={tabStat !== 2 ? {display: 'none'} : {}}>
+                <section className="container tab-content container-latest pt80" id="tab-2" style={tabStat !== 2 ? { display: 'none' } : {}}>
                     <div>
                         Tab 2 content
                     </div>
