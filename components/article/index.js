@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { FadeInDiv } from './style';
+import parse from 'html-react-parser';
 
 const Article = (props) => {
+
+    console.log(props.articleContent, '=============')
 
     return (
         <div className="col-xl-4 col-md-6">
@@ -22,7 +25,7 @@ const Article = (props) => {
                     </div>
                     <div className="article-content">
                         <p className="article-content__text text18">
-                            {props.articleContent}
+                            {parse(props.articleContent)}
                         </p>
                     </div>
                 </div>

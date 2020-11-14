@@ -11,6 +11,7 @@
   "dependencies": {
     "animate.css": "3.7",
     "axios": "^0.21.0",
+    "html-react-parser": "^0.14.1",
     "next": "10.0.0",
     "next-redux-wrapper": "^6.0.2",
     "pure-react-carousel": "^1.27.6",
