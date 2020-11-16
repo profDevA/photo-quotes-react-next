@@ -27,6 +27,8 @@ const Blogs = (props) => {
         });
     }
 
+    console.log(articles, 'articles')
+
     return (
         <>
             <Header />
@@ -39,7 +41,7 @@ const Blogs = (props) => {
                         </div>
                         {
                             articles && articles.length > 0 &&
-                            articles.map((article, index) => <Article key={index} articleTitle={article.title} articleImage={SERVER_URI + '/uploads/' + article.featured_image} articleContent={article.text} />)
+                            articles.map((article, index) => <Article key={index} articleId={article.id} articleTitle={article.title} articleImage={SERVER_URI + '/uploads/' + article.featured_image} articleContent={article.text} />)
                         }
                     </div>
                     <div className="row container-more">
