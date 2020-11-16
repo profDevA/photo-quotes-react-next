@@ -20,7 +20,6 @@ export default function Blog(props) {
         };
     }, []);
 
-    console.log({blogId})
     console.log({props})
 
     return (
