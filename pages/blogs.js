@@ -27,9 +27,6 @@ const Blogs = (props) => {
         });
     }
 
-    console.log(articles, 'apiurl')
-    console.log(process.env.NODE_ENV, 'this is env')
-
     return (
         <>
             <Header />
@@ -46,7 +43,7 @@ const Blogs = (props) => {
                         }
                     </div>
                     <div className="row container-more">
-                        <a href="javascript:void(0)" className="wide-text btn btn__blue-gradient" onClick={() => getMoreArticles()} disabled={page === props.last_page ? true : false}>More articles</a>
+                        <button className="wide-text btn btn__blue-gradient" onClick={() => getMoreArticles()} disabled={page === props.last_page ? true : false}>More articles</button>
                     </div>
                 </section>
             </main>

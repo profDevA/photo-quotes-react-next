@@ -61,6 +61,11 @@
         height: 100%;
       }
     }
+
+    @media screen and (min-width: $sm-point) {
+      max-height: 140px;
+      overflow: hidden;
+    }
   }
 
   &__offset {
@@ -69,15 +74,28 @@
 
   &-top {
     margin-top: 25px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     &__title {
       transition: all .3s ease;
     }
+
+    @media screen and (min-width: $sm-point) {
+      // height: 70px;
+    }
   }
 
   &-content {
-    overflow: hidden;
     margin-top: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     &__text {
       max-height: 90px;
