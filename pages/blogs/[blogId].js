@@ -1,9 +1,16 @@
 import Head from 'next/head'
-import Header from '../components/header/WhiteHeader'
-import Footer from '../components/footer'
-import Comments from '../components/comments';
+import { useRouter } from 'next/router'
+import Header from '../../components/header/WhiteHeader'
+import Footer from '../../components/footer'
+import Comments from '../../components/comments';
+import BottomShortLink from '../../components/bottomShortLink';
+
+const SERVER_URI = process.env.NODE_ENV === 'development' ? process.env.DEV_SERVER_URI : process.env.PROD_SERVER_URI;
 
 export default function Blog() {
+    const router = useRouter()
+    const { blogId } = router.query;
+
     return (
         <>
             <Head>
@@ -11,7 +18,7 @@ export default function Blog() {
                 <title>Photo Quotes</title>
                 <link rel="icon" href="/favicon.png" />
             </Head>
-            <section class="hero-bg" style={{ backgroundImage: "url('assets/blog-bg.jpg')" }}>
+            <section className="hero-bg" style={{ backgroundImage: "url('/assets/blog-bg.jpg')" }}>
                 <Header />
             </section>
             <main>
@@ -39,12 +46,12 @@ export default function Blog() {
                                 <p className="text16 side-col-container__text">
                                     To chart a course, one must have a direction. In reality, the eye is no better than the philosophy behind it. The photographer creates, evolves a better, a more selective, more acute seeing eye by looking ever more sharply at what is going on in the world. Like every other means of expression, photography, if it is to be utterly honest and direct, should be related to the life of the times––the pulse of today. The photograph may be presented as finely and artistically as you will; but to merit serious consideration, must be directly connected with the world we live in.
                                 </p>
-                                <img src="assets/blog-inner.jpg" alt="" className="side-col-container__img" />
+                                <img src="/assets/blog-inner.jpg" alt="" className="side-col-container__img" />
                                 <p className="text16 side-col-container__text">
                                     What we need is a return, on a mounting spiral of historic understanding, to the great tradition of realism. Since ultimately the photograph is a statement, a document of the now, a greater responsibility is put on us. Today, we are confronted with reality on the vastest scale mankind has known. Some people are still unaware that reality contains unparalleled beauties. The fantastic and unexpected, the everchanging and renewing is nowhere so exemplified as in real life itself. Once we understand this, it exercises a dynamic compulsion on us, and a photo-document is born.
                                 </p>
                                 <div className="side-col-container__quote">
-                                    <img src="assets/icons/quotes.svg" alt="" />
+                                    <img src="/assets/icons/quotes.svg" alt="" />
                                     <p className="side-col-container__quote-text">
                                         I have yet to see a fine photograph which is not a good document.
                                     </p>
@@ -74,7 +81,7 @@ export default function Blog() {
                                 <a href="" className="outline-btn wide-text"><span className="like like-gray"></span>Liked</a>
                             </div>
                             <div className="banner-container-200">
-                                <img src="assets/google-200.jpg" alt="" className="banner-200" />
+                                <img src="/assets/google-200.jpg" alt="" className="banner-200" />
                             </div>
                         </div>
                     </div>
@@ -85,9 +92,7 @@ export default function Blog() {
                 </section>
 
                 <section className="container-fluid gray-gradient pb160 pt130 rel">
-                    <div className="banner-container banner-container-728 banner-container-abs">
-                        <img src="assets/google-728.jpg" alt="" className="banner-728" />
-                    </div>
+                    <BottomShortLink />
 
                     <div className="container container-blog container-blog__nogutters rel">
                         <div className="row justify-content-between align-items-center blog__top">
@@ -101,7 +106,7 @@ export default function Blog() {
                         <div className="row mt80">
                             <div className="col-4">
                                 <div className="article slider-item-blog">
-                                    <img src="assets/art1.jpg" alt="" />
+                                    <img src="/assets/art1.jpg" alt="" />
                                     <div className="article-top">
                                         <a className="article-top__title title" href="#">
                                             How to Make Time to Make Things
@@ -116,7 +121,7 @@ export default function Blog() {
                             </div>
                             <div className="col-4">
                                 <div className="article slider-item-blog">
-                                    <img src="assets/art2.jpg" alt="" />
+                                    <img src="/assets/art2.jpg" alt="" />
                                     <div className="article-top">
                                         <a className="article-top__title title" href="#">
                                             The Domestication of Cryptocurrency
@@ -131,7 +136,7 @@ export default function Blog() {
                             </div>
                             <div className="col-4">
                                 <div className="article slider-item-blog">
-                                    <img src="assets/art3.jpg" alt="" />
+                                    <img src="/assets/art3.jpg" alt="" />
                                     <div className="article-top">
                                         <a className="article-top__title title" href="#">
                                             What’s so Special About Google’s Pixel 3?
@@ -155,3 +160,10 @@ export default function Blog() {
         </>
     )
 }
+
+// export async function getStaticProps(context) {
+//     const res = await axios.get(SERVER_URI + '/api/articles');
+//     return {
+//         props: res.data
+//     }
+// }

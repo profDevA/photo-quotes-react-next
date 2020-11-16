@@ -7,7 +7,7 @@ export default function Comments() {
             </div>
             <div className="comment row comment__user">
                 <div className="comment__person col-1">
-                    <img src="assets/ava1.jpg" alt="" />
+                    <img src="/assets/ava1.jpg" alt="" />
                 </div>
                 <div className="comment__right col">
                     <form action="" className="comment-form__container">
@@ -31,7 +31,7 @@ export default function Comments() {
             </div>
             <div className="comment row">
                 <div className="comment__person col-1">
-                    <img src="assets/ava2.jpg" alt="" />
+                    <img src="/assets/ava2.jpg" alt="" />
                 </div>
                 <div className="comment__right col">
                     <div className="comment__info">
@@ -54,7 +54,7 @@ export default function Comments() {
             </div>
             <div className="comment row">
                 <div className="comment__person col-1">
-                    <img src="assets/ava3.jpg" alt="" />
+                    <img src="/assets/ava3.jpg" alt="" />
                 </div>
                 <div className="comment__right col">
                     <div className="comment__info">
@@ -77,7 +77,7 @@ export default function Comments() {
             </div>
             <div className="comment comment__second row">
                 <div className="comment__person col-1">
-                    <img src="assets/ava4.jpg" alt="" />
+                    <img src="/assets/ava4.jpg" alt="" />
                 </div>
                 <div className="comment__right col">
                     <div className="comment__info">
