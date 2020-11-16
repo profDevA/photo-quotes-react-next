@@ -1,3 +1,8 @@
 //Action Types
-export const INCREMENT_COUNTER = "INCREMENT_COUNTER";
-export const DECREMENT_COUNTER = "DECREMENT_COUNTER";
+export const TICK = 'TICK'
+export const INCREMENT = 'INCREMENT'
+export const DECREMENT = 'DECREMENT'
+export const RESET = 'RESET'
+
+// Blog actions
+export const GET_BLOG_LIST = 'GET_BLOG_LIST'

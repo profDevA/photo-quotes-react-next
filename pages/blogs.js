@@ -54,7 +54,7 @@ const Blogs = (props) => {
 }
 
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const res = await axios.get(SERVER_URI + '/api/articles');
     return {
         props: res.data

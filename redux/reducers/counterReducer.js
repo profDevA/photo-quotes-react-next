@@ -1,14 +1,17 @@
-import {DECREMENT_COUNTER, INCREMENT_COUNTER} from '../types';
+import * as types from '../types'
 
-const counterReducer = (state = {value: 0}, action) => {
-    switch (action.type) {
-        case INCREMENT_COUNTER:
-            return {...state, value: state.value + 1};
-        case DECREMENT_COUNTER:
-            return {...state, value: state.value - 1};
-        default:
-            return {...state};
-    }
-};
+// COUNTER REDUCER
+const counterReducer = (state = 0, { type }) => {
+  switch (type) {
+    case types.INCREMENT:
+      return state + 1
+    case types.DECREMENT:
+      return state - 1
+    case types.RESET:
+      return 0
+    default:
+      return state
+  }
+}
 
 export default counterReducer;
