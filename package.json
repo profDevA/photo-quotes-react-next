@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "CI= next build",
+    "build": "next build",
     "start": "next start",
     "export": "next export"
   },
@@ -13,6 +13,7 @@
     "axios": "^0.21.0",
     "html-react-parser": "^0.14.1",
     "next": "10.0.0",
+    "next-on-netlify": "^2.6.1",
     "next-redux-wrapper": "^6.0.2",
     "pure-react-carousel": "^1.27.6",
     "react": "17.0.1",
