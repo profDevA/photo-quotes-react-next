@@ -59,6 +59,7 @@ h1 {
 .main-title {
   font-size: 80px;
   line-height: 80px;
+  margin-bottom: .5em;
 
   @media screen and (max-width: $md-point){
     font-size: 70px;
