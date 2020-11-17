@@ -22,7 +22,7 @@ const Article = ({ article }) => {
                         </div>
                         <div className="article-top">
                             <a className="article-top__title title">
-                                {article.article_title}
+                                {article.title}
                             </a>
                         </div>
                         <div className="article-content">
