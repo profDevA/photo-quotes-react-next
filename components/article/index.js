@@ -11,11 +11,6 @@ const Article = ({ article }) => {
         <div className="col-xl-4 col-md-6">
             <FadeInDiv>
                 <Link href={'blogs/' + article.slug}>
-                {/* <Link href={{
-                    pathname: '/blogs/[slug]',
-                    query: { slug: article.slug },
-                }}
-                > */}
                     <div className="article article__offset wow fadeIn">
                         <div className="article-cover">
                             <img src={SERVER_URI + '/uploads/' + article.featured_image} alt="" />
