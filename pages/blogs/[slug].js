@@ -151,8 +151,8 @@ export default function Blog(props) {
 }
 
 export async function getServerSideProps({ params }) {
-    const { blogId } = params
-    const res = await axios.get(SERVER_URI + '/api/articles/' + blogId);
+    const { slug } = params
+    const res = await axios.get(SERVER_URI + '/api/articles/' + slug);
     return {
         props: { article: res.data }
     }
