@@ -21,13 +21,16 @@ export default function Blog(props) {
         };
     }, []);
 
-    console.log({ props })
-
     return (
         <>
             <Head>
                 <meta name="robots" content="noindex" />
-                <title>Photo Quotes - {article && article.title}</title>
+                <title>
+                    {
+                        article &&
+                            (article.meta_title !== '' ? article.meta_title + ' - PhotoQuotes' : article.title + ' - PhotoQuotes')
+                    }
+                </title>
                 <link rel="icon" href="/favicon.png" />
             </Head>
             <section className="hero-bg" style={{ backgroundImage: "url('/assets/blog-bg.jpg')" }}>
