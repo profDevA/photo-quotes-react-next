@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <section className="hero-bg hero-bg__white">
-        <Header />
+        <Header title={'Home - PhotoQuotes'} />
         <HeroSection />
       </section>
       <div>

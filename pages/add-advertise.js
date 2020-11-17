@@ -4,7 +4,7 @@ import Footer from '../components/footer'
 export default function AddAdvertise() {
     return (
         <>
-            <Header />
+            <Header title={'Advertise - PhotoQuotes'}/>
             <main>
                 <section className="container pt80 pb70">
                     <div className="side-col-container row">

@@ -8,7 +8,7 @@ export default function Account() {
         <>
             <Head>
                 <meta name="robots" content="noindex" />
-                <title>Photo Quotes</title>
+                <title>Account - PhotoQuotes</title>
                 <link rel="icon" href="/favicon.png" />
             </Head>
             <header className="container-fluid">

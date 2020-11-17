@@ -4,7 +4,7 @@ import Footer from '../components/footer'
 export default function AboutQutotes() {
     return (
         <>
-            <Header />
+            <Header title={About - PhotoQuotes} />
             <main>
                 <section className="container pt80 pb70">
                     <div className="side-col-container row">

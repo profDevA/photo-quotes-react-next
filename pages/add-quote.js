@@ -4,7 +4,7 @@ import Footer from '../components/footer'
 export default function AddQuote() {
     return (
         <>
-            <Header />
+            <Header title={'Quotes - PhotoQuotes'} />
             <main>
                 <section className="container pt80 pb70">
                     <div className="row">

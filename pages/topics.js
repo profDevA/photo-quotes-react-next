@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function Topics() {
     return (
         <>
-            <Header />
+            <Header title={'Topics - PhotoQuotes'} />
             <main>
                 <section className="container pt80 pb70">
                     <h1 className="main-title">Quotes Topics</h1>

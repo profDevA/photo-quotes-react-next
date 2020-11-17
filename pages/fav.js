@@ -15,7 +15,7 @@ export default function Fav() {
         <>
             <Head>
                 <meta name="robots" content="noindex" />
-                <title>Photo Quotes</title>
+                <title>Favourites - PhotoQuotes</title>
                 <link rel="icon" href="/favicon.png" />
             </Head>
             <header className="container-fluid">

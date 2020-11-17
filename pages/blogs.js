@@ -31,7 +31,7 @@ const Blogs = (props) => {
 
     return (
         <>
-            <Header />
+            <Header title={'PhotoQuotes - Blog'}/>
             <main>
                 <section className="container container-blog ptb110">
                     <div className="row">

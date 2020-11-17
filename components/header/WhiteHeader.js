@@ -3,7 +3,7 @@ import Filter from '../../components/filter'
 import Menu from '../../components/menu'
 import Image from 'next/image'
 
-export default function WhiteHeader() {
+export default function WhiteHeader(props) {
     return (
         <header className="container-fluid header__transparent">
             <div className="container">

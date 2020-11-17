@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function Authors() {
     return (
         <>
-            <Header />
+            <Header title={'Authors - PhotoQuotes'} />
             <main>
                 <section className="container ptb90">
                     <h1 className="main-title">All Authors</h1>

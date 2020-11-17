@@ -5,7 +5,7 @@ export default function ArticleInner() {
     return (
         <>
             <section className="hero-bg" style={{backgroundImage: 'url(assets/art-bg.jpg)'}}>
-                <Header />
+                <Header title={'Article - PhotoQuotes'} />
             </section>
             <main>
                 <section className="container inner-container pb120">

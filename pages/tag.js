@@ -3,7 +3,7 @@ import Footer from '../components/footer'
 export default function Tag() {
     return (
         <>
-            <Header />
+            <Header title={'PhotoQuotes - Tags'} />
             <main>
                 <section className="container pt80">
                     <div className="nav-chain">

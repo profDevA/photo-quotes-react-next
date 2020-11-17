@@ -27,7 +27,7 @@ export default function Blog(props) {
         <>
             <Head>
                 <meta name="robots" content="noindex" />
-                <title>Photo Quotes</title>
+                <title>Photo Quotes - {article && article.title}</title>
                 <link rel="icon" href="/favicon.png" />
             </Head>
             <section className="hero-bg" style={{ backgroundImage: "url('/assets/blog-bg.jpg')" }}>
@@ -53,7 +53,7 @@ export default function Blog(props) {
                             </div>
                             <div className="side-col-container__left col-xl-9 col-lg-8">
                                 <div className="side-col-container__content">
-                                    <h1 class="main-title">{article.title ?? ''}</h1>
+                                    <h1 className="main-title">{article.title ?? ''}</h1>
                                     {parse(article.text)}
                                 </div>
                             </div>

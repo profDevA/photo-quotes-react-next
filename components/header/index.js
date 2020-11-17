@@ -4,12 +4,12 @@ import Filter from '../../components/filter'
 import Menu from '../../components/menu'
 import Image from 'next/image'
 
-const Header = () => {
+const Header = (props) => {
     return (
         <>
             <Head>
                 <meta name="robots" content="noindex" />
-                <title>Photo Quotes</title>
+                <title>{props.title}</title>
                 <link rel="icon" href="/favicon.png" />
             </Head>
             <header className="container-fluid">
@@ -17,7 +17,7 @@ const Header = () => {
                     <div className="top-header">
                         <div className="top-header__left">
                             <a href="/">
-                                <img src="/assets/logo.png" alt="Logo"  />
+                                <img src="/assets/logo.png" alt="Logo" />
                             </a>
                         </div>
                         <Menu />

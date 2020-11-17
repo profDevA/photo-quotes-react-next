@@ -10,7 +10,7 @@ export default function Login() {
         <>
             <Head>
                 <meta name="robots" content="noindex" />
-                <title>Photo Quotes</title>
+                <title>Login - PhotoQuotes</title>
                 <link rel="icon" href="/favicon.png" />
             </Head>
             <main className="o-hidden rel md-no-rel">
