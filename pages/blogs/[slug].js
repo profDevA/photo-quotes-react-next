@@ -31,6 +31,7 @@ export default function Blog(props) {
                             (article.meta_title !== '' ? article.meta_title + ' - PhotoQuotes' : article.title + ' - PhotoQuotes')
                     }
                 </title>
+                <meta name="description" content={article && article.meta_description && article.meta_description} />
                 <link rel="icon" href="/favicon.png" />
             </Head>
             <section className="hero-bg" style={{ backgroundImage: "url('/assets/blog-bg.jpg')" }}>
