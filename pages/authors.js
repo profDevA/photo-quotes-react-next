@@ -70,12 +70,7 @@ function Authors(props) {
 
         <section className="pb80">
           <div className="banner-container banner-container-728">
-            <Image
-              src="/assets/google-728.jpg"
-              alt=""
-              width={728}
-              height={90}
-            />
+            <img src="/assets/google-728.jpg" alt="" className="" width={728} height={90} />
           </div>
         </section>
       </main>
