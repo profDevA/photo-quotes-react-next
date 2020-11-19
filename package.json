@@ -28,6 +28,7 @@
     "redux-thunk": "^2.3.0",
     "sass": "^1.28.0",
     "styled-components": "^5.2.1",
+    "swr": "^0.3.9",
     "wow.js": "^1.2.2"
   }
 }

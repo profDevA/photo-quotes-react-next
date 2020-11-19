@@ -9,6 +9,10 @@ import '../styles/style.scss'
 const isServer = typeof window === 'undefined'
 const WOW = !isServer ? require('wow.js') : null
 
+export function reportWebVitals(metric) {
+  console.log(metric)
+}
+
 function MyApp({ Component, pageProps }) {
   const store = useStore(pageProps.initialReduxState)
   useEffect(() => {

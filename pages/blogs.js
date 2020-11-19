@@ -20,7 +20,6 @@ const Blogs = (props) => {
 
     const getMoreArticles = async () => {
         const res = await axios.get(SERVER_URI + '/api/articles?page=' + (page + 1));
-        console.log(res, '=============')
         setPage(res.data.current_page)
         setArticles(prevState => {
             return [...prevState, ...res.data.data]
@@ -58,6 +57,7 @@ const Blogs = (props) => {
 
 export async function getServerSideProps() {
     const res = await axios.get(SERVER_URI + '/api/articles');
+    
     return {
         props: res.data
     }
