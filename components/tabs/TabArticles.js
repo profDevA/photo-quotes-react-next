@@ -5,10 +5,10 @@ export default function TabArticles(props) {
                 <div className="col-xl-4 col-md-6">
                     <div className="article article__offset">
                         <div className="article-cover">
-                            <img src="assets/art1.jpg" alt="" />
+                            <img src="/assets/art1.jpg" alt="" />
                             <div className="cover__hover">
                                 <a href="article-inner.html" className="cover__hover-img">
-                                    <img src="assets/icons/arrow.svg" alt="Go" />
+                                    <img src="/assets/icons/arrow.svg" alt="Go" />
                                 </a>
                             </div>
                         </div>
@@ -27,10 +27,10 @@ export default function TabArticles(props) {
                 <div className="col-xl-4 col-md-6">
                     <div className="article article__offset">
                         <div className="article-cover">
-                            <img src="assets/art2.jpg" alt="" />
+                            <img src="/assets/art2.jpg" alt="" />
                             <div className="cover__hover">
                                 <a href="#" className="cover__hover-img">
-                                    <img src="assets/icons/arrow.svg" alt="Go" />
+                                    <img src="/assets/icons/arrow.svg" alt="Go" />
                                 </a>
                             </div>
                         </div>
@@ -49,10 +49,10 @@ export default function TabArticles(props) {
                 <div className="col-xl-4 col-md-6">
                     <div className="article article__offset">
                         <div className="article-cover">
-                            <img src="assets/art3.jpg" alt="" />
+                            <img src="/assets/art3.jpg" alt="" />
                             <div className="cover__hover">
                                 <a href="#" className="cover__hover-img">
-                                    <img src="assets/icons/arrow.svg" alt="Go" />
+                                    <img src="/assets/icons/arrow.svg" alt="Go" />
                                 </a>
                             </div>
                         </div>
@@ -71,10 +71,10 @@ export default function TabArticles(props) {
                 <div className="col-xl-4 col-md-6">
                     <div className="article article__offset">
                         <div className="article-cover">
-                            <img src="assets/art4.jpg" alt="" />
+                            <img src="/assets/art4.jpg" alt="" />
                             <div className="cover__hover">
                                 <a href="#" className="cover__hover-img">
-                                    <img src="assets/icons/arrow.svg" alt="Go" />
+                                    <img src="/assets/icons/arrow.svg" alt="Go" />
                                 </a>
                             </div>
                         </div>
@@ -93,10 +93,10 @@ export default function TabArticles(props) {
                 <div className="col-xl-4 col-md-6">
                     <div className="article article__offset">
                         <div className="article-cover">
-                            <img src="assets/art5.jpg" alt="" />
+                            <img src="/assets/art5.jpg" alt="" />
                             <div className="cover__hover">
                                 <a href="#" className="cover__hover-img">
-                                    <img src="assets/icons/arrow.svg" alt="Go" />
+                                    <img src="/assets/icons/arrow.svg" alt="Go" />
                                 </a>
                             </div>
                         </div>                        <div className="article-top">
@@ -114,10 +114,10 @@ export default function TabArticles(props) {
                 <div className="col-xl-4 col-md-6">
                     <div className="article article__offset">
                         <div className="article-cover">
-                            <img src="assets/art6.jpg" alt="" />
+                            <img src="/assets/art6.jpg" alt="" />
                             <div className="cover__hover">
                                 <a href="#" className="cover__hover-img">
-                                    <img src="assets/icons/arrow.svg" alt="Go" />
+                                    <img src="/assets/icons/arrow.svg" alt="Go" />
                                 </a>
                             </div>
                         </div>                        <div className="article-top">
@@ -135,10 +135,10 @@ export default function TabArticles(props) {
                 <div className="col-xl-4 col-md-6">
                     <div className="article article__offset">
                         <div className="article-cover">
-                            <img src="assets/art7.jpg" alt="" />
+                            <img src="/assets/art7.jpg" alt="" />
                             <div className="cover__hover">
                                 <a href="#" className="cover__hover-img">
-                                    <img src="assets/icons/arrow.svg" alt="Go" />
+                                    <img src="/assets/icons/arrow.svg" alt="Go" />
                                 </a>
                             </div>
                         </div>                        <div className="article-top">
@@ -156,10 +156,10 @@ export default function TabArticles(props) {
                 <div className="col-xl-4 col-md-6">
                     <div className="article article__offset">
                         <div className="article-cover">
-                            <img src="assets/art8.jpg" alt="" />
+                            <img src="/assets/art8.jpg" alt="" />
                             <div className="cover__hover">
                                 <a href="#" className="cover__hover-img">
-                                    <img src="assets/icons/arrow.svg" alt="Go" />
+                                    <img src="/assets/icons/arrow.svg" alt="Go" />
                                 </a>
                             </div>
                         </div>                        <div className="article-top">
@@ -177,10 +177,10 @@ export default function TabArticles(props) {
                 <div className="col-xl-4 col-md-6">
                     <div className="article article__offset">
                         <div className="article-cover">
-                            <img src="assets/art9.jpg" alt="" />
+                            <img src="/assets/art9.jpg" alt="" />
                             <div className="cover__hover">
                                 <a href="#" className="cover__hover-img">
-                                    <img src="assets/icons/arrow.svg" alt="Go" />
+                                    <img src="/assets/icons/arrow.svg" alt="Go" />
                                 </a>
                             </div>
                         </div>

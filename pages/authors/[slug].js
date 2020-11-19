@@ -58,7 +58,7 @@ export default function OneAuthor({ source }) {
               </div>
             </div>
             <div className="hero-section__left_bottom scroll-down">
-              <img src="assets/icons/mouse.svg" alt="" />
+              <img src="/assets/icons/mouse.svg" alt="" />
               <p className="ml20">Scroll down</p>
             </div>
           </div>
@@ -68,7 +68,7 @@ export default function OneAuthor({ source }) {
           >
             <div className="card big-card image-card">
               <img
-                src="assets/card-bg1.jpg"
+                src="/assets/card-bg1.jpg"
                 alt=""
                 className="image-card__bg"
               />

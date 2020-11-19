@@ -28,7 +28,7 @@ export default function TabQutoes(props) {
                         </div>
                     </div>
                     <div className="card image-card middle-card mt80">
-                        <img src="assets/card-bg2.jpg" alt="" className="image-card__bg" />
+                        <img src="/assets/card-bg2.jpg" alt="" className="image-card__bg" />
                         <div className="card__content">
                             <div className="card__top">
                                 <a href="#" className="tag tag__white">#art</a>
@@ -49,7 +49,7 @@ export default function TabQutoes(props) {
                         </div>
                     </div>
                     <div className="banner-container banner-container-300">
-                        <img src="assets/google-300.jpg" alt="" className="banner-3000" />
+                        <img src="/assets/google-300.jpg" alt="" className="banner-3000" />
                     </div>
                     <div className="quote">
                         <div className="quote__top">
@@ -124,7 +124,7 @@ export default function TabQutoes(props) {
 
 
                     <div className="card image-card image-card__purple middle-card mt80">
-                        <img src="assets/card-bg3.jpg" alt="" className="image-card__bg" />
+                        <img src="/assets/card-bg3.jpg" alt="" className="image-card__bg" />
                         <div className="card__content">
                             <div className="card__top">
                                 <a href="#" className="tag tag__white">#art</a>
