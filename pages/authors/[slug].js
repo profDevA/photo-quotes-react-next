@@ -121,9 +121,9 @@ export default function OneAuthor({ source }) {
         </section>
         <TabQuotes active={activeTabId == 1 ? true : false} />
         <TabBooks active={activeTabId == 2 ? true : false} />
-        <TabArticles active={activeTabId == 3 ? true : false} />
-        <TabGallery active={activeTabId == 4 ? true : false} />
-        <TabInterviews active={activeTabId == 5 ? true : false} />
+        <TabInterviews active={activeTabId == 3 ? true : false} />
+        <TabArticles active={activeTabId == 4 ? true : false} />
+        <TabGallery active={activeTabId == 5 ? true : false} />
 
         <section className="pb80">
           <div className="banner-container banner-container-728">
