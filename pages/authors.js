@@ -49,12 +49,12 @@ function Authors(props) {
           >
             {sources &&
               Object.keys(sources).map((item, index) => {
-                if (sources[item].firstName[0].includes(selectedTab))
+                if (sources[item].firstName[0].toLowerCase().includes(selectedTab))
                   return (
                     <div className="col-lg-3 col-6 col-xs" key={index}>
                       <ul className="list-links__gray">
                         <li>
-                        <Link href={'authors/' + sources[item].slug}>{`${sources[item].firstName} ${sources[item].middleName} ${sources[item].lastName}`}</Link>
+                        <Link href={'authors/' + sources[item].slug}>{`${sources[item].firstName ? sources[item].firstName : ''} ${sources[item].middleName ? sources[item].middleName : ''} ${sources[item].lastName ? sources[item].lastName : ''}`}</Link>
                         </li>
                       </ul>
                     </div>
