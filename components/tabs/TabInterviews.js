@@ -5,7 +5,7 @@ export default function TabIntervies(props) {
                 <div className="col-12 col-lg-6">
                     <div className="interview row">
                         <div className="col interview-cover">
-                            <img className="circle-cover" src="assets/inter1.jpg" />
+                            <img className="circle-cover" src="/assets/inter1.jpg" />
                         </div>
                         <div className="col">
                             <div className="interview-title">
@@ -20,7 +20,7 @@ export default function TabIntervies(props) {
                     </div>
                     <div className="interview row">
                         <div className="col interview-cover">
-                            <img className="circle-cover" src="assets/inter2.jpg" />
+                            <img className="circle-cover" src="/assets/inter2.jpg" />
                         </div>
                         <div className="col">
                             <div className="interview-title">
@@ -35,7 +35,7 @@ export default function TabIntervies(props) {
                     </div>
                     <div className="interview row">
                         <div className="col interview-cover">
-                            <img className="circle-cover" src="assets/inter3.jpg" />
+                            <img className="circle-cover" src="/assets/inter3.jpg" />
                         </div>
                         <div className="col">
                             <div className="interview-title">
@@ -52,7 +52,7 @@ export default function TabIntervies(props) {
                 <div className="col-12 col-lg-6">
                     <div className="interview row">
                         <div className="col interview-cover">
-                            <img className="circle-cover" src="assets/inter4.jpg" />
+                            <img className="circle-cover" src="/assets/inter4.jpg" />
                         </div>
                         <div className="col">
                             <div className="interview-title">
@@ -67,7 +67,7 @@ export default function TabIntervies(props) {
                     </div>
                     <div className="interview row">
                         <div className="col interview-cover">
-                            <img className="circle-cover" src="assets/inter5.jpg" />
+                            <img className="circle-cover" src="/assets/inter5.jpg" />
                         </div>
                         <div className="col">
                             <div className="interview-title">
@@ -82,7 +82,7 @@ export default function TabIntervies(props) {
                     </div>
                     <div className="interview row">
                         <div className="col interview-cover">
-                            <img className="circle-cover" src="assets/inter6.jpg" />
+                            <img className="circle-cover" src="/assets/inter6.jpg" />
                         </div>
                         <div className="col">
                             <div className="interview-title">

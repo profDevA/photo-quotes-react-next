@@ -68,7 +68,7 @@ export default function OneAuthor({ source }) {
           >
             <div className="card big-card image-card">
               <img
-                src="assets/card-bg1.jpg"
+                src="/assets/card-bg1.jpg"
                 alt=""
                 className="image-card__bg"
               />
@@ -121,9 +121,9 @@ export default function OneAuthor({ source }) {
         </section>
         <TabQuotes active={activeTabId == 1 ? true : false} data={source}/>
         <TabBooks active={activeTabId == 2 ? true : false} data={source}/>
-        <TabArticles active={activeTabId == 3 ? true : false} data={source}/>
-        <TabGallery active={activeTabId == 4 ? true : false} data={source}/>
-        <TabInterviews active={activeTabId == 5 ? true : false} data={source}/>
+        <TabInterviews active={activeTabId == 3 ? true : false} data={source}/>
+        <TabArticles active={activeTabId == 4 ? true : false} data={source}/>
+        <TabGallery active={activeTabId == 5 ? true : false} data={source}/>
 
         <section className="pb80">
           <div className="banner-container banner-container-728">

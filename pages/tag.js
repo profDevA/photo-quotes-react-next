@@ -61,7 +61,7 @@ export default function Tag() {
                                 </div>
                             </div>
                             <div className="card image-card middle-card mt80">
-                                <img src="assets/card-bg2.jpg" alt="" className="image-card__bg" />
+                                <img src="/assets/card-bg2.jpg" alt="" className="image-card__bg" />
                                 <div className="card__content">
                                     <div className="card__top">
                                         <a href="#" className="tag tag__white">#art</a>
@@ -88,7 +88,7 @@ export default function Tag() {
                                 </div>
                             </div>
                             <div className="banner-container banner-container-300">
-                                <img src="assets/google-300.jpg" alt="" className="banner-300s" />
+                                <img src="/assets/google-300.jpg" alt="" className="banner-300s" />
                             </div>
                         </div>
                         <div className="col-12 col-lg-6 wow zoomIn" data-wow-delay=".2s">
@@ -145,7 +145,7 @@ export default function Tag() {
                             </div>
 
                             <div className="card image-card image-card__purple middle-card mt80">
-                                <img src="assets/card-bg3.jpg" alt="" className="image-card__bg" />
+                                <img src="/assets/card-bg3.jpg" alt="" className="image-card__bg" />
                                 <div className="card__content">
                                     <div className="card__top">
                                         <a href="#" className="tag tag__white">#art</a>
@@ -202,7 +202,7 @@ export default function Tag() {
                                 <div className="col-md-6 col d-flex flex-column justify-content-lg-between">
                                     <h3 className="w75-md">Photo Quotes of the Day</h3>
                                     <div className="banner-container banner-container-320">
-                                        <img src="assets/google-320.jpg" alt="" className="banner-320" />
+                                        <img src="/assets/google-320.jpg" alt="" className="banner-320" />
                                     </div>
                                 </div>
                                 <div className="col">
