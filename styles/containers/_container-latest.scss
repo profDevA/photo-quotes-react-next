@@ -1,6 +1,7 @@
 .container-latest {
   [class^="col-"]:last-child {
-    padding-left: 55px;
+    // padding-left: 55px;
+    padding-right: 55px;
   }
   [class^="col-"]:first-child {
     padding-right: 55px;

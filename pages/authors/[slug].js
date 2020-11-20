@@ -58,7 +58,7 @@ export default function OneAuthor({ source }) {
               </div>
             </div>
             <div className="hero-section__left_bottom scroll-down">
-              <img src="assets/icons/mouse.svg" alt="" />
+              <img src="../assets/icons/mouse.svg" alt="" />
               <p className="ml20">Scroll down</p>
             </div>
           </div>
@@ -112,18 +112,18 @@ export default function OneAuthor({ source }) {
                   data-tab="tab-1"
                   onClick={() => onClick(i + 1)}
                 >
-                  <h3 className="tab-item">{tab}</h3>
-                  <span className="tab-item__counter">21</span>
+                  <h3 className="tab-item">{tab}</h3>                 
+              <span className="tab-item__counter">{source[tab]&&source[tab].length}</span>
                 </div>
               );
             })}
           </div>
         </section>
-        <TabQuotes active={activeTabId == 1 ? true : false} />
-        <TabBooks active={activeTabId == 2 ? true : false} />
-        <TabArticles active={activeTabId == 3 ? true : false} />
-        <TabGallery active={activeTabId == 4 ? true : false} />
-        <TabInterviews active={activeTabId == 5 ? true : false} />
+        <TabQuotes active={activeTabId == 1 ? true : false} data={source}/>
+        <TabBooks active={activeTabId == 2 ? true : false} data={source}/>
+        <TabArticles active={activeTabId == 3 ? true : false} data={source}/>
+        <TabGallery active={activeTabId == 4 ? true : false} data={source}/>
+        <TabInterviews active={activeTabId == 5 ? true : false} data={source}/>
 
         <section className="pb80">
           <div className="banner-container banner-container-728">

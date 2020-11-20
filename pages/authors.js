@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Image from "next/image";
-import Link from 'next/link'
+import Link from "next/link";
+import { useSelector } from "react-redux";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { alphaLists, SERVER_URI } from "../constants";
 
 function Authors(props) {
+  const storeData = useSelector((store) => store.search);
   const [state, setState] = useState({
     sources: {},
     selectedTab: "a",
+    searchKeyword: "",
   });
 
   const { sources, selectedTab } = state;
@@ -18,6 +20,16 @@ function Authors(props) {
     console.log(props);
     setState({ ...state, sources: props });
   }, [props]);
+
+  useEffect(() => {
+    if (storeData.searchKey) {
+      setState({
+        ...state,
+        selectedTab: storeData.searchKey[0],
+        searchKeyword: storeData.searchKey,
+      });
+    }
+  }, [storeData]);
 
   const selectTab = (item) => {
     setState({ ...state, selectedTab: item });
@@ -49,16 +61,46 @@ function Authors(props) {
           >
             {sources &&
               Object.keys(sources).map((item, index) => {
-                if (sources[item].firstName[0].includes(selectedTab))
+                if (
+                  sources[item].sourceName[0]
+                    .toLowerCase()
+                    .includes(selectedTab) &&
+                  !storeData.searchKey
+                ) {
                   return (
                     <div className="col-lg-3 col-6 col-xs" key={index}>
                       <ul className="list-links__gray">
                         <li>
-                        <Link href={'authors/' + sources[item].slug}>{`${sources[item].firstName} ${sources[item].middleName} ${sources[item].lastName}`}</Link>
+                          <Link
+                            href={"authors/" + sources[item].slug}
+                          >{`${sources[item].sourceName}`}</Link>
                         </li>
                       </ul>
                     </div>
                   );
+                } else if (
+                  sources[item].sourceName[0]
+                    .toLowerCase()
+                    .includes(selectedTab) &&
+                  storeData.searchKey
+                ) {
+                  if (
+                    sources[item].sourceName
+                      .toLowerCase()
+                      .includes(storeData.searchKey.toLowerCase())
+                  )
+                    return (
+                      <div className="col-lg-3 col-6 col-xs" key={index}>
+                        <ul className="list-links__gray">
+                          <li>
+                            <Link
+                              href={"authors/" + sources[item].slug}
+                            >{`${sources[item].sourceName}`}</Link>
+                          </li>
+                        </ul>
+                      </div>
+                    );
+                }
               })}
           </div>
           <div className="row container-more d-lg-none d-sm-flex">
@@ -70,7 +112,13 @@ function Authors(props) {
 
         <section className="pb80">
           <div className="banner-container banner-container-728">
-            <img src="/assets/google-728.jpg" alt="" className="" width={728} height={90} />
+            <img
+              src="/assets/google-728.jpg"
+              alt=""
+              className=""
+              width={728}
+              height={90}
+            />
           </div>
         </section>
       </main>
@@ -81,7 +129,6 @@ function Authors(props) {
 
 export async function getServerSideProps() {
   const res = await axios.get(SERVER_URI + "/api/sources");
-  console.log(res.data);
   return {
     props: { ...res.data },
   };
