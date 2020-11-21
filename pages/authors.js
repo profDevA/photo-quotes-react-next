@@ -61,8 +61,7 @@ function Authors(props) {
           >
             {sources &&
               Object.keys(sources).map((item, index) => {
-                  const fullName=  sources[item].firstName+" "+sources[item].midleName+" "+sources[item].lastName
-                  console.log(fullName)
+                  const fullName=  (sources[item].firstName ? sources[item].firstName : '') + " " + (sources[item].midleName ? sources[item].midleName + ' ' : '') + (sources[item].lastName ? sources[item].lastName : '')
                 if (
                     fullName[0]
                     .toLowerCase()
