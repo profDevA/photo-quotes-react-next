@@ -61,10 +61,12 @@ function Authors(props) {
           >
             {sources &&
               Object.keys(sources).map((item, index) => {
+                  const fullName=  sources[item].firstName+" "+sources[item].midleName+" "+sources[item].lastName
+                  console.log(fullName)
                 if (
-                  sources[item].sourceName[0]
+                    fullName[0]
                     .toLowerCase()
-                    .includes(selectedTab) &&
+                    .includes(selectedTab.toLowerCase()) &&
                   !storeData.searchKey
                 ) {
                   return (
@@ -73,19 +75,19 @@ function Authors(props) {
                         <li>
                           <Link
                             href={"authors/" + sources[item].slug}
-                          >{`${sources[item].sourceName}`}</Link>
+                          >{fullName}</Link>
                         </li>
                       </ul>
                     </div>
                   );
                 } else if (
-                  sources[item].sourceName[0]
+                    fullName[0]
                     .toLowerCase()
-                    .includes(selectedTab) &&
+                    .includes(selectedTab.toLowerCase()) &&
                   storeData.searchKey
                 ) {
                   if (
-                    sources[item].sourceName
+                    fullName
                       .toLowerCase()
                       .includes(storeData.searchKey.toLowerCase())
                   )
@@ -95,7 +97,7 @@ function Authors(props) {
                           <li>
                             <Link
                               href={"authors/" + sources[item].slug}
-                            >{`${sources[item].sourceName}`}</Link>
+                            >{fullName}</Link>
                           </li>
                         </ul>
                       </div>
