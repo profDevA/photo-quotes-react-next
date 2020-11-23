@@ -80,7 +80,7 @@ export default function Quotes({ source, metaTitle, metaDescription }) {
                   </a>
                 </div>
                 <div className="card__text">
-                  <p>{source.Quotes[0].quote}</p>
+                  <p>{source.Quotes.length>0&&source.Quotes[0].quote}</p>
                 </div>
                 <div className="card__bottom">
                   <a className="card__author" href="#">
