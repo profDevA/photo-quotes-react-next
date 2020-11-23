@@ -26,14 +26,14 @@ export default function TabQutoes(props) {
                       </a>
                     </div>
                     <div className="quote__center">
-                      <p>{`“${item.visibleComments}”`}</p>
+                      <p>{`“${item.quote}”`}</p>
                     </div>
                     <div className="quote__bottom">
                       <a className="quote-author" href="#">
                         {}
                       </a>
                       <div className="icons">
-                        <span className="counter">7</span>
+                        <span className="counter"></span>
                         <span className="icon-comment"></span>
                         <span className="icon-share"></span>
                         <span className="like like-gray"></span>
@@ -41,16 +41,14 @@ export default function TabQutoes(props) {
                     </div>
                     <div className="quote__meta">
                       <p className="gray-font">
-                        when asked is she had any gems of wisdom for the
-                        photographer today., Professional photographer's
-                        survival guide by Charles E. Rotkin
+                        {item.visibleComments}
                       </p>
                     </div>
                     <div className="quote__meta">
-                      <p>
+                      {/* <p>
                         ISBN: 0817454098 , Page: 242. This book is available
                         from <span>Amazon.com</span>
-                      </p>
+                      </p> */}
                     </div>
                   </div>
                 </div>

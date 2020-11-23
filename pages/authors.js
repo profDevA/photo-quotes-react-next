@@ -73,7 +73,7 @@ function Authors(props) {
                       <ul className="list-links__gray">
                         <li>
                           <Link
-                            href={"authors/" + sources[item].slug}
+                            href={"authors/" + sources[item].slug+"/Quotes"}
                           >{fullName}</Link>
                         </li>
                       </ul>
