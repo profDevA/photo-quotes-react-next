@@ -12,7 +12,7 @@
   "dependencies": {
     "animate.css": "3.7",
     "axios": "^0.21.0",
-    "html-react-parser": "^0.14.1",
+    "html-react-parser": "^0.14.2",
     "next": "10.0.0",
     "next-on-netlify": "^2.6.1",
     "next-redux-wrapper": "^6.0.2",

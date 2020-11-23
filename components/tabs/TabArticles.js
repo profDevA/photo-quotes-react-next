@@ -1,4 +1,5 @@
 import { SERVER_URI } from "../../constants";
+import parse from 'html-react-parser';
 
 export default function TabArticles(props) {
   console.log(props.data);
@@ -25,14 +26,12 @@ export default function TabArticles(props) {
                   className="article-top__title title"
                   href="article-inner.html"
                 >
-                  How to Make Time to Make Things
+                  {item.title}
                 </a>
               </div>
               <div className="article-content">
                 <p className="article-content__text text18">
-                  We live our lives on different clocks — biological, cultural,
-                  personal, and more. There are things we have to do and …
-                  things we want to do
+                {parse(item.text)}
                 </p>
               </div>
             </div>
