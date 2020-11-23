@@ -21,7 +21,7 @@ export default function Articles({ source }) {
   console.log(source);
   return (
     <>
-      <AuthorContent source={source} />
+      <AuthorContent source={source} metaTitle={source.metaTitle} metaDescription={source.metaDescription}/>
       <main>
         <section className="container">
           <div className="row tabs-container">
