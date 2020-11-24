@@ -19,7 +19,7 @@ export default function Interviews({ source }) {
 
   return (
     <>
-      <AuthorContent source={source} by={"Books by"}/>
+      <AuthorContent source={source} by={"Interviews by"}/>
       <main>
         <section className="container">
           <div className="row tabs-container">

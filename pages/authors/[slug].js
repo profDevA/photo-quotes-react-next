@@ -1,14 +1,13 @@
 import { useState } from "react";
-import Head from "next/head";
 import axios from "axios";
 import Footer from "../../components/footer";
-import TabArticles from "../../components/tabs/TabArticles";
+import TabQuotes from "../../components/tabs/TabQuotes";
 import AuthorContent from "../../components/authors";
 import { SERVER_URI } from "../../constants";
 import { useRouter } from "next/router";
 
-export default function Articles({ source }) {
-  const [activeTabId, setActiveTabId] = useState(4);
+export default function Quotes({ source }) {
+  const [activeTabId, setActiveTabId] = useState(1);
   const router = useRouter();
   const [tabs, setTabs] = useState([
     "Quotes",
@@ -18,14 +17,13 @@ export default function Articles({ source }) {
     "Gallery",
   ]);
 
-  console.log(source);
   return (
     <>
       <AuthorContent
         source={source}
         metaTitle={source.metaTitle}
         metaDescription={source.metaDescription}
-        by={"Article by"}
+        by={"Quotes by"}
       />
       <main>
         <section className="container">
@@ -48,11 +46,7 @@ export default function Articles({ source }) {
           </div>
         </section>
 
-        <TabArticles
-          active={activeTabId == 4 ? true : false}
-          data={source}
-          route={`/authors/${source.slug}/Articles`}
-        />
+        <TabQuotes active={activeTabId == 1 ? true : false} data={source} />
 
         <section className="pb80">
           <div className="banner-container banner-container-728">
@@ -69,7 +63,6 @@ export async function getServerSideProps({ params }) {
   const { slug } = params;
 
   const res = await axios.get(SERVER_URI + "/api/sources/" + slug);
-  console.log(res.data);
   return {
     props: { source: res.data },
   };

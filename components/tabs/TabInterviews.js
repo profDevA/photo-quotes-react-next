@@ -31,7 +31,6 @@ export default function TabIntervies(props) {
                       {item.title}
                     </a>
                   </div>
-
                   <div className="interview-desc">
                     {parse(item.text)}
                     <a href="#" className="interview-meta">
