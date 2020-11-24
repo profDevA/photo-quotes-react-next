@@ -1,10 +1,7 @@
 import * as types from "../types";
 import axios from "axios";
+import {SERVER_URI} from '../../constants'
 
-const SERVER_URI =
-  process.env.NODE_ENV === "development"
-    ? process.env.DEV_SERVER_URI
-    : process.env.PROD_SERVER_URI;
 
 // INITIALIZES CLOCK ON SERVER
 export const serverRenderClock = () => (dispatch) =>

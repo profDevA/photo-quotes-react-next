@@ -6,7 +6,6 @@ import AuthorContent from "../../../components/authors";
 import { SERVER_URI } from "../../../constants";
 import { useRouter } from "next/router";
 
-
 export default function Quotes({ source }) {
   const [activeTabId, setActiveTabId] = useState(1);
   const router = useRouter();
@@ -18,12 +17,16 @@ export default function Quotes({ source }) {
     "Gallery",
   ]);
 
-  console.log(source);
   return (
     <>
-      <AuthorContent source={source} metaTitle={source.metaTitle} metaDescription={source.metaDescription}/>
+      <AuthorContent
+        source={source}
+        metaTitle={source.metaTitle}
+        metaDescription={source.metaDescription}
+        by={"Quotes by"}
+      />
       <main>
-        <section className="container" >
+        <section className="container">
           <div className="row tabs-container">
             {tabs.map((tab, i) => {
               return (
@@ -60,7 +63,6 @@ export async function getServerSideProps({ params }) {
   const { slug } = params;
 
   const res = await axios.get(SERVER_URI + "/api/sources/" + slug);
-  console.log(res.data);
   return {
     props: { source: res.data },
   };

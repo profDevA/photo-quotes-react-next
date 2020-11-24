@@ -1,8 +1,14 @@
 import { SERVER_URI } from "../../constants";
 import parse from 'html-react-parser';
+import {useRouter} from 'next/router'
 
 export default function TabArticles(props) {
-  console.log(props.data);
+  
+  const router = useRouter();
+  const showArticle = (title) => {
+    console.log(`${props.route}/${title}`)
+    router.push(`${props.route}/${title}`)
+  }
   return (
     <section
       className="tab-content container container-blog"
@@ -16,7 +22,7 @@ export default function TabArticles(props) {
               <div className="article-cover">
                 <img src={`${SERVER_URI}/uploads/${item.featured_image}`} alt="" />
                 <div className="cover__hover">
-                  <a href="#" className="cover__hover-img">
+                  <a href="#" className="cover__hover-img" onClick={()=>showArticle(item.title)}>
                     <img src="/assets/icons/arrow.svg" alt="Go" />
                   </a>
                 </div>
@@ -46,3 +52,4 @@ export default function TabArticles(props) {
     </section>
   );
 }
+

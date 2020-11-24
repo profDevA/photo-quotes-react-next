@@ -21,7 +21,7 @@ export default function Gallery({ source }) {
   console.log(source.slug);
   return (
     <>
-      <AuthorContent source={source} />
+      <AuthorContent source={source} by={"Books by"}/>
       <main>
         <section className="container">
           <div className="row tabs-container">

@@ -20,7 +20,7 @@ export default function Interviews({ source }) {
   console.log(source.slug);
   return (
     <>
-      <AuthorContent source={source} />
+      <AuthorContent source={source} by={"Books by"}/>
       <main>
         <section className="container">
           <div className="row tabs-container">

@@ -30,7 +30,7 @@ export default function TabBooks(props) {
                             href={item.amazonUrl}
                           >
                             <img
-                              src="../assets/icons/amazon.svg"
+                              src="../../assets/icons/amazon.svg"
                               alt="Amazon"
                             />
                             <p>Buy at Amazon</p>

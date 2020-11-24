@@ -2,6 +2,10 @@ import { useSelector } from "react-redux";
 
 export default function TabQutoes(props) {
   const { data } = props;
+  let fullName = `${data.firstName} ${data.middleName} ${data.lastName}`;
+  if (fullName.includes(null)) {
+    fullName = fullName.replace(null, "");
+  }
   const storeData = useSelector((store) => store.search);
 
   return (
@@ -18,12 +22,12 @@ export default function TabQutoes(props) {
                 <div className="col-12 col-lg-6 wow fadeIn" key={index}>
                   <div className="quote mt0">
                     <div className="quote__top">
-                      <a href="#" className="tag tag__blue">
-                        #art
-                      </a>
-                      <a href="#" className="tag tag__blue">
-                        #photography
-                      </a>
+                      {item.tag_name.length > 0 &&
+                        item.tag_name.map((item, index) => (
+                          <a href="#" className="tag tag__blue" key={index}>
+                            #{item}
+                          </a>
+                        ))}
                     </div>
                     <div className="quote__center">
                       <p>{`“${item.quote}”`}</p>
@@ -40,37 +44,35 @@ export default function TabQutoes(props) {
                       </div>
                     </div>
                     <div className="quote__meta">
-                      <p className="gray-font">
-                        {item.visibleComments}
-                      </p>
+                      <p className="gray-font">{item.visibleComments}</p>
                     </div>
                     <div className="quote__meta">
-                      {/* <p>
-                        ISBN: 0817454098 , Page: 242. This book is available
-                        from <span>Amazon.com</span>
-                      </p> */}
+                      <p>{fullName}</p>
                     </div>
                   </div>
                 </div>
               );
             } else if (
-              item.visibleComments
+              item.quote
                 .toLowerCase()
                 .includes(storeData.searchKey.toLowerCase())
             ) {
               return (
-                <div className="col-12 col-lg-6 wow fadeIn" key={index} key={index}>
+                <div
+                  className="col-12 col-lg-6 wow fadeIn"
+                  key={index}        
+                >
                   <div className="quote mt0">
                     <div className="quote__top">
-                      <a href="#" className="tag tag__blue">
-                        #art
-                      </a>
-                      <a href="#" className="tag tag__blue">
-                        #photography
-                      </a>
+                    {item.tag_name.length > 0 &&
+                        item.tag_name.map((item, index) => (
+                          <a href="#" className="tag tag__blue" key={index}>
+                            #{item}
+                          </a>
+                        ))}
                     </div>
                     <div className="quote__center">
-                      <p>{`“${item.visibleComments}”`}</p>
+                    <p>{`“${item.quote}”`}</p>
                     </div>
                     <div className="quote__bottom">
                       <a className="quote-author" href="#">
@@ -84,17 +86,10 @@ export default function TabQutoes(props) {
                       </div>
                     </div>
                     <div className="quote__meta">
-                      <p className="gray-font">
-                        when asked is she had any gems of wisdom for the
-                        photographer today., Professional photographer's
-                        survival guide by Charles E. Rotkin
-                      </p>
+                      <p className="gray-font">{item.visibleComments}</p>
                     </div>
                     <div className="quote__meta">
-                      <p>
-                        ISBN: 0817454098 , Page: 242. This book is available
-                        from <span>Amazon.com</span>
-                      </p>
+                      <p>{fullName}</p>
                     </div>
                   </div>
                 </div>

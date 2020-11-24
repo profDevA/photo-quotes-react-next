@@ -19,7 +19,7 @@ export default function Quotes({ source }) {
 
   return (
     <>
-      <AuthorContent source={source} metaTitle={source.metaTitle} metaDescription={source.metaDescription}/>
+      <AuthorContent source={source} metaTitle={source.metaTitle} metaDescription={source.metaDescription} by={"Books by"}/>
       <main>
         <section className="container">
           <div className="row tabs-container">

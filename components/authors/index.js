@@ -6,9 +6,24 @@ import { useState, useEffect } from "react";
 
 const AuthorBackground = styled.section`
   background-image: url(${(props) => props.background}) !important;
+  height: 100vh;
+
+  &::before {
+    content: "";
+    background-color: #2f343b;
+    background-repeat: repeat-y;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
 `;
 
-export default function Quotes({ source, metaTitle, metaDescription }) {
+export default function Quotes({ source, metaTitle, metaDescription, by }) {
   let fullName = `${source.firstName} ${source.middleName} ${source.lastName}`;
   if (fullName.includes(null)) {
     fullName = fullName.replace(null, "");
@@ -18,9 +33,10 @@ export default function Quotes({ source, metaTitle, metaDescription }) {
 
   useEffect(() => {
     setImage(source.backgroundImage);
-    console.log(source.backgroundImage);
+    console.log(source);
   }, [source]);
 
+  console.log(source);
   return (
     <>
       <Head>
@@ -28,31 +44,20 @@ export default function Quotes({ source, metaTitle, metaDescription }) {
         <title>{metaTitle}</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <AuthorBackground className="hero-bg hero-bg__author" background={image}>
+      {console.log("------------", source.backgroundImage)}
+      <AuthorBackground className="hero-bg" background={source.backgroundImage}>
         <WhiteHeader />
         <section className="hero-section__white hero-section row container ptb90">
           <div className="hero-section__left col-xl-4 col-lg-5 col-12 wow fadeInRight">
             <div className="hero-section__left_top">
-              <h2 className="big-lettering tab-title" data-tab="tab-1">
-                Quotes by
-              </h2>
-              <h2 className="big-lettering tab-title" data-tab="tab-2">
-                Books about
-              </h2>
-              <h2 className="big-lettering tab-title" data-tab="tab-3">
-                Interviews with
-              </h2>
-              <h2 className="big-lettering tab-title" data-tab="tab-4">
-                Articles about
-              </h2>
-              <h2 className="big-lettering tab-title" data-tab="tab-5">
-                Photographs by
+              <h2 class="big-lettering" data-tab="tab-1">
+                {by}
               </h2>
 
               <h1 className="mt10 main-title">{fullName}</h1>
               <div className="author-info">
                 {/* <p>[1898 – 1991]</p> */}
-                <p>American photographer</p>
+                {/* <p>American photographer</p> */}
               </div>
             </div>
             <div className="hero-section__left_bottom scroll-down">
@@ -72,15 +77,16 @@ export default function Quotes({ source, metaTitle, metaDescription }) {
               />
               <div className="card__content">
                 <div className="card__top">
-                  <a href="#" className="tag tag__white">
-                    #art
-                  </a>
-                  <a href="#" className="tag tag__white">
-                    #photography
-                  </a>
+                  {source.Quotes.length > 0 &&
+                    source.Quotes[0].tag_name.length > 0 &&
+                    source.Quotes[0].tag_name.map((item, index) => (
+                      <a href="#" className="tag tag__white" key={index}>
+                        #{item}
+                      </a>
+                    ))}
                 </div>
                 <div className="card__text">
-                  <p>{source.Quotes.length>0&&source.Quotes[0].quote}</p>
+                  <p>{source.Quotes.length > 0 && source.Quotes[0].quote}</p>
                 </div>
                 <div className="card__bottom">
                   <a className="card__author" href="#">

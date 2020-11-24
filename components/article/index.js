@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link'
 import { FadeInDiv } from './style';
 import parse from 'html-react-parser';
+import {SERVER_URI} from '../../constants'
 
-const SERVER_URI = process.env.NODE_ENV === 'development' ? process.env.DEV_SERVER_URI : process.env.PROD_SERVER_URI;
 
 const Article = ({ article }) => {
 

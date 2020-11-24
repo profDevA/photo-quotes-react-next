@@ -21,7 +21,12 @@ export default function Articles({ source }) {
   console.log(source);
   return (
     <>
-      <AuthorContent source={source} metaTitle={source.metaTitle} metaDescription={source.metaDescription}/>
+      <AuthorContent
+        source={source}
+        metaTitle={source.metaTitle}
+        metaDescription={source.metaDescription}
+        by={"Article by"}
+      />
       <main>
         <section className="container">
           <div className="row tabs-container">
@@ -42,8 +47,12 @@ export default function Articles({ source }) {
             })}
           </div>
         </section>
-      
-        <TabArticles active={activeTabId == 4 ? true : false} data={source} />
+
+        <TabArticles
+          active={activeTabId == 4 ? true : false}
+          data={source}
+          route={`/authors/${source.slug}/Articles`}
+        />
 
         <section className="pb80">
           <div className="banner-container banner-container-728">
