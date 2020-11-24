@@ -1,13 +1,14 @@
 import { useState } from "react";
+import Head from "next/head";
 import axios from "axios";
-import Footer from "../../../components/footer";
-import AuthorContent from "../../../components/authors";
-import TabInterviews from "../../../components/tabs/TabInterviews";
-import { SERVER_URI } from "../../../constants";
+import Footer from "../../components/footer";
+import TabArticles from "../../components/tabs/TabArticles";
+import AuthorContent from "../../components/authors";
+import { SERVER_URI } from "../../constants";
 import { useRouter } from "next/router";
 
-export default function Interviews({ source }) {
-  const [activeTabId, setActiveTabId] = useState(3);
+export default function Articles({ source }) {
+  const [activeTabId, setActiveTabId] = useState(4);
   const router = useRouter();
   const [tabs, setTabs] = useState([
     "Quotes",
@@ -17,9 +18,15 @@ export default function Interviews({ source }) {
     "Gallery",
   ]);
 
+  console.log(source);
   return (
     <>
-      <AuthorContent source={source} by={"Books by"}/>
+      <AuthorContent
+        source={source}
+        metaTitle={source.metaTitle}
+        metaDescription={source.metaDescription}
+        by={"Article by"}
+      />
       <main>
         <section className="container">
           <div className="row tabs-container">
@@ -41,7 +48,11 @@ export default function Interviews({ source }) {
           </div>
         </section>
 
-        <TabInterviews active={activeTabId == 3 ? true : false} data={source} />
+        <TabArticles
+          active={activeTabId == 4 ? true : false}
+          data={source}
+          route={`/authors/${source.slug}/Articles`}
+        />
 
         <section className="pb80">
           <div className="banner-container banner-container-728">
