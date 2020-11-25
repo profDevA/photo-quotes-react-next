@@ -1,14 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import Footer from "../../components/footer";
 import TabQuotes from "../../components/tabs/TabQuotes";
 import AuthorContent from "../../components/authors";
 import { SERVER_URI } from "../../constants";
 import { useRouter } from "next/router";
+// import Error from '../../components/404'
 
-export default function Quotes({ source }) {
+export default function Quotes({ source, status }) {
+  
   const [activeTabId, setActiveTabId] = useState(1);
   const router = useRouter();
+  
+  useEffect(() => {
+    
+    if(status){
+      router.push(`/error404`);
+    }
+  });
   const [tabs, setTabs] = useState([
     "Quotes",
     "Books",
@@ -63,7 +72,8 @@ export async function getServerSideProps({ params }) {
   const { slug } = params;
 
   const res = await axios.get(SERVER_URI + "/api/sources/" + slug);
+  console.log(res.data)
   return {
-    props: { source: res.data },
+    props: { source: res.data, status:res.data.firstName?false:true },
   };
 }

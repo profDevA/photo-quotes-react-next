@@ -33,10 +33,8 @@ export default function Quotes({ source, metaTitle, metaDescription, by }) {
 
   useEffect(() => {
     setImage(source.backgroundImage);
-    console.log(source);
   }, [source]);
 
-  console.log(source);
   return (
     <>
       <Head>
@@ -44,7 +42,6 @@ export default function Quotes({ source, metaTitle, metaDescription, by }) {
         <title>{metaTitle}</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
-      {console.log("------------", source.backgroundImage)}
       <AuthorBackground className="hero-bg" background={source.backgroundImage}>
         <WhiteHeader />
         <section className="hero-section__white hero-section row container ptb90">

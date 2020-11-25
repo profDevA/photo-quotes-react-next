@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 export default function TabBooks(props) {
   const { data } = props;
   const storeData = useSelector((store) => store.search);
-  console.log(data);
   return (
     <section
       className="container tab-content"
@@ -30,7 +29,7 @@ export default function TabBooks(props) {
                             href={item.amazonUrl}
                           >
                             <img
-                              src="../../assets/icons/amazon.svg"
+                              src="/assets/icons/amazon.svg"
                               alt="Amazon"
                             />
                             <p>Buy at Amazon</p>
@@ -50,7 +49,8 @@ export default function TabBooks(props) {
               </div>
             );
           } else if (
-            item.title.toLowerCase().includes(storeData.searchKey.toLowerCase())
+            item.title.toLowerCase().includes(storeData.searchKey.toLowerCase()) || 
+            item.author.toLowerCase().includes(storeData.searchKey.toLowerCase()) 
           ) {
             return (
               <div className="row books-container justify-content-between" key={index}>

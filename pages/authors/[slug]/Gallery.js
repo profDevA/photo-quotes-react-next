@@ -6,6 +6,8 @@ import TabGallery from "../../../components/tabs/TabGallery";
 import AuthorContent from "../../../components/authors";
 import { SERVER_URI } from "../../../constants";
 import { useRouter } from "next/router";
+import { useDispatch } from "react-redux";
+import { setSearch } from "../../../redux/actions";
 
 export default function Gallery({ source }) {
   const [activeTabId, setActiveTabId] = useState(5);
@@ -17,8 +19,8 @@ export default function Gallery({ source }) {
     "Articles",
     "Gallery",
   ]);
+  const dispatch = useDispatch();
 
-  console.log(source.slug);
   return (
     <>
       <AuthorContent source={source} by={"Gallery by"}/>
@@ -31,7 +33,10 @@ export default function Gallery({ source }) {
                   key={i}
                   className={activeTabId == i + 1 ? "tab tab__active" : "tab"}
                   data-tab="tab-1"
-                  onClick={() => router.push(`/authors/${source.slug}/${tab}`)}
+                  onClick={() => {
+                    dispatch(setSearch(""));
+                    router.push(`/authors/${source.slug}/${tab}`);
+                  }}
                 >
                   <h3 className="tab-item">{tab}</h3>
                   <span className="tab-item__counter">
@@ -60,7 +65,6 @@ export async function getServerSideProps({ params }) {
   const { slug } = params;
 
   const res = await axios.get(SERVER_URI + "/api/sources/" + slug);
-  console.log(res.data);
   return {
     props: { source: res.data },
   };

@@ -7,21 +7,13 @@ import Footer from "../../../../components/footer";
 import { SERVER_URI } from "../../../../constants";
 
 export default function ArticleInner({ source, title }) {
-  console.log(source, title);
   const [article, setArticle] = useState(source.Interviews);
   let fullName = `${source.firstName} ${source.middleName} ${source.lastName}`;
   if (fullName.includes(null)) {
     fullName = fullName.replace(null, "");
   }
   useEffect(() => {
-    console.log(source.Articles);
-    // source.Articles.map((item, index) => {
-    //   // if (item.title === title) {
-    //     setArticle({ ...article, main: item });
-    //   // } else {
-    //     // setArticle({ ...article, others: [...article.others, item] });
-    //   // }
-    // });
+
   }, []);
   return (
     <>

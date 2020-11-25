@@ -17,7 +17,6 @@ function Authors(props) {
   const { sources, selectedTab } = state;
 
   useEffect(() => {
-    console.log(props);
     setState({ ...state, sources: props });
   }, [props]);
 

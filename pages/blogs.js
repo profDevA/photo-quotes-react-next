@@ -26,7 +26,6 @@ const Blogs = (props) => {
     });
   };
 
-  console.log(articles, "articles");
 
   return (
     <>

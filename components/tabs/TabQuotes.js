@@ -4,9 +4,11 @@ export default function TabQutoes(props) {
   const { data } = props;
   let fullName = `${data.firstName} ${data.middleName} ${data.lastName}`;
   if (fullName.includes(null)) {
-    fullName = fullName.replace(null, "");
+    fullName = fullName.replace(null, "").replace("  ", " ");
   }
   const storeData = useSelector((store) => store.search);
+  // console.log(data.Quotes);
+
 
   return (
     <section
@@ -55,16 +57,17 @@ export default function TabQutoes(props) {
             } else if (
               item.quote
                 .toLowerCase()
-                .includes(storeData.searchKey.toLowerCase())
+                .includes(storeData.searchKey.toLowerCase()) ||
+              item.tag_name.filter((t) =>
+                t.toLowerCase().includes(storeData.searchKey.toLowerCase())
+              ).length ||
+              fullName.toLowerCase().includes(storeData.searchKey.toLowerCase())
             ) {
               return (
-                <div
-                  className="col-12 col-lg-6 wow fadeIn"
-                  key={index}        
-                >
+                <div className="col-12 col-lg-6 wow fadeIn" key={index}>
                   <div className="quote mt0">
                     <div className="quote__top">
-                    {item.tag_name.length > 0 &&
+                      {item.tag_name.length > 0 &&
                         item.tag_name.map((item, index) => (
                           <a href="#" className="tag tag__blue" key={index}>
                             #{item}
@@ -72,7 +75,7 @@ export default function TabQutoes(props) {
                         ))}
                     </div>
                     <div className="quote__center">
-                    <p>{`“${item.quote}”`}</p>
+                      <p>{`“${item.quote}”`}</p>
                     </div>
                     <div className="quote__bottom">
                       <a className="quote-author" href="#">
