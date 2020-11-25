@@ -4,4 +4,9 @@ module.exports = {
         PROD_SERVER_URI: 'http://jairo.mycouncil.ie',
     },
     target: "serverless",
+    images: {
+        domains: [
+            'jairo.mycouncil.ie'
+        ]
+    }
 }

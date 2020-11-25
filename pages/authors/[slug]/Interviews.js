@@ -19,7 +19,7 @@ export default function Interviews({ source }) {
 
   return (
     <>
-      <AuthorContent source={source} by={"Interviews by"}/>
+      <AuthorContent source={source} by={"Interviews by"} />
       <main>
         <section className="container">
           <div className="row tabs-container">
@@ -41,7 +41,11 @@ export default function Interviews({ source }) {
           </div>
         </section>
 
-        <TabInterviews active={activeTabId == 3 ? true : false} data={source} />
+        <TabInterviews
+          active={activeTabId == 3 ? true : false}
+          data={source}
+          route={`/authors/${source.slug}/Interviews`}
+        />
 
         <section className="pb80">
           <div className="banner-container banner-container-728">

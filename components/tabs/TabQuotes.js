@@ -97,11 +97,11 @@ export default function TabQutoes(props) {
             }
           })}
       </div>
-      <div className="row container justify-content-center">
+      {/* <div className="row container justify-content-center">
         <a href="#" className="wide-text btn btn__blue-gradient">
           Load more
         </a>
-      </div>
+      </div> */}
     </section>
   );
 }

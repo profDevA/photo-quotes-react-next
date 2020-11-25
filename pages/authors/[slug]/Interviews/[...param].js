@@ -8,7 +8,7 @@ import { SERVER_URI } from "../../../../constants";
 
 export default function ArticleInner({ source, title }) {
   console.log(source, title);
-  const [article, setArticle] = useState(source.Articles);
+  const [article, setArticle] = useState(source.Interviews);
   let fullName = `${source.firstName} ${source.middleName} ${source.lastName}`;
   if (fullName.includes(null)) {
     fullName = fullName.replace(null, "");
@@ -65,7 +65,7 @@ export default function ArticleInner({ source, title }) {
                           <span></span>
                         </li>
                         <li className="active">
-                          <a href="#">Articles</a>
+                          <a href="#">Interviews</a>
                         </li>
                       </ul>
                     </div>
@@ -114,7 +114,7 @@ export default function ArticleInner({ source, title }) {
           <div className="container container-blog container-blog__nogutters rel">
             <div className="row justify-content-between align-items-center blog__top">
               <div className="col-md-10 col-12">
-                <h2>Other articles by {fullName}</h2>
+                <h2>Other interviews by {fullName}</h2>
               </div>
               <div className="col-2">
                 <a className="dark-gray-font wide-text title-more" href="#">
@@ -147,11 +147,11 @@ export default function ArticleInner({ source, title }) {
                   }
                 })}
             </div>
-            <div className="row container-more container-more__hide">
+            {/* <div className="row container-more container-more__hide">
               <a href="#" className="wide-text btn btn__blue-gradient">
                 More articles
               </a>
-            </div>
+            </div> */}
           </div>
         </section>
       </main>

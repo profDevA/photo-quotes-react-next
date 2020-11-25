@@ -15,22 +15,21 @@ export default function TabArticles(props) {
       id="tab-4"
       style={props.active ? { display: "block" } : { display: "none" }}
     >
-      <div className="row">
+      <div className="row" >
         {props.data.Articles.length > 0 && props.data.Articles.map((item, index)=>(
-          <div className="col-xl-4 col-md-6">
+          <div className="col-xl-4 col-md-6" onClick={()=>showArticle(item.title.replace(" ","-"))} key={index}>
             <div className="article article__offset">
               <div className="article-cover">
                 <img src={`${SERVER_URI}/uploads/${item.featured_image}`} alt="" />
                 <div className="cover__hover">
-                  <a href="#" className="cover__hover-img" onClick={()=>showArticle(item.title)}>
+                  <a href="#" className="cover__hover-img" >
                     <img src="/assets/icons/arrow.svg" alt="Go" />
                   </a>
                 </div>
               </div>
               <div className="article-top">
                 <a
-                  className="article-top__title title"
-                  href="article-inner.html"
+                  className="article-top__title title"                  
                 >
                   {item.title}
                 </a>
@@ -44,11 +43,11 @@ export default function TabArticles(props) {
           </div>
         ))}
       </div>
-      <div className="row container-more">
+      {/* <div className="row container-more">
         <a href="#" className="wide-text btn btn__blue-gradient">
           More articles
         </a>
-      </div>
+      </div> */}
     </section>
   );
 }

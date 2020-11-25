@@ -1,39 +1,34 @@
-import Image from 'next/image'
+import Image from "next/image";
+import {getTime} from '../../constants'
 
-export default function TabGallery(props) {
-    return (
-        <section className="tab-content" id="tab-5" style={props.active?{display:'block'}:{display:'none'}}>
-            <div className="row gallery-container">
-                <div className="col-md-6 col-12 gallery-col">
-                    <div className="gallery-item">
-                        {/* <img src="/assets/gal1.jpg" alt="" /> */}
-                        <Image src={'/assets/gal1.jpg' } unsized/>
-                        <span className="gallery-info">Madrid, 1933</span>
-                    </div>
-                    <div className="gallery-item">
-                        <Image src="/assets/gal3.jpg" alt="" unsized />
-                        <span className="gallery-info">Madrid, 1933</span>
-                    </div>
-                    <div className="gallery-item">
-                        <Image src="/assets/gal5.jpg" alt="" unsized />
-                        <span className="gallery-info">Madrid, 1933</span>
-                    </div>
+export default function TabGallery({ source, active }) {
+  let fullName = `${source.firstName} ${source.middleName} ${source.lastName}`;
+  if (fullName.includes(null)) {
+    fullName = fullName.replace(null, "");
+  }
+
+
+
+  return (
+    <section
+      className="tab-content"
+      id="tab-5"
+      style={active ? { display: "block" } : { display: "none" }}
+    >
+      <div className="row gallery-container">
+        {source.Gallery.length > 0 &&
+          source.Gallery.map((item, index) => {
+            return (
+              <div className="col-md-6 col-12 gallery-col pb-5" key={index}>
+                <div className="gallery-item">
+                  {/* <img src="/assets/gal1.jpg" alt="" /> */}
+                  <Image src={item.url} unsized />
+                  <span className="gallery-info">{fullName}, {getTime(item.created_at)}</span>
                 </div>
-                <div className="col-md-6 col-12 gallery-col">
-                    <div className="gallery-item">
-                        <Image src="/assets/gal2.jpg" alt="" unsized />
-                        <span className="gallery-info">Madrid, 1933</span>
-                    </div>
-                    <div className="gallery-item">
-                        <Image src="/assets/gal4.jpg" alt="" unsized />
-                        <span className="gallery-info">Madrid, 1933</span>
-                    </div>
-                    <div className="gallery-item">
-                        <Image src="/assets/gal6.jpg" alt="" unsized />
-                        <span className="gallery-info">Madrid, 1933</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-    )
+              </div>
+            );
+          })}
+      </div>
+    </section>
+  );
 }

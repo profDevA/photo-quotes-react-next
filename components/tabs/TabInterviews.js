@@ -3,10 +3,16 @@ import parse from "html-react-parser";
 import { useRouter } from "next/router";
 
 export default function TabIntervies(props) {
-  const { data } = props;
+  const { data, route } = props;
   let fullName = `${data.firstName} ${data.middleName} ${data.lastName}`;
   if (fullName.includes(null)) {
     fullName = fullName.replace(null, "");
+  }
+
+  const router = useRouter()
+
+  const showInterview = (title) => {
+    router.push(`${route}/${title}`)
   }
   return (
     <section
@@ -17,7 +23,7 @@ export default function TabIntervies(props) {
       <div className="row interviews-container">
         {props.data.Interviews.length > 0 &&
           props.data.Interviews.map((item, index) => (
-            <div className="col-12 col-lg-6 pb-5" key={index}>
+            <div className="col-12 col-lg-6 pb-5" key={index} onClick={()=>showInterview(item.title.replace(" ","-"))} key={index}>
               <div className="interview row">
                 <div className="col interview-cover">
                   <img

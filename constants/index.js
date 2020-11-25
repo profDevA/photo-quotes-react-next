@@ -29,3 +29,9 @@ export const alphaLists = [
   "y",
   "z",
 ];
+
+export const getTime = (date) => {
+  var options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date(date).toLocaleDateString([],options);
+      
+}

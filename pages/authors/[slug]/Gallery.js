@@ -43,7 +43,7 @@ export default function Gallery({ source }) {
           </div>
         </section>
 
-        <TabGallery active={activeTabId == 5 ? true : false} data={source} />
+        <TabGallery active={activeTabId == 5 ? true : false} source={source} />
 
         <section className="pb80">
           <div className="banner-container banner-container-728">
