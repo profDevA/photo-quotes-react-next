@@ -57,7 +57,7 @@ export default function Articles({ source }) {
         <TabArticles
           active={activeTabId == 4 ? true : false}
           data={source}
-          route={`/authors/${source.slug}/Articles`}
+          route={`/authors/${source.slug}/articles`}
         />
 
         <section className="pb80">

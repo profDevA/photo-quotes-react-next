@@ -50,7 +50,7 @@ export default function Interviews({ source }) {
         <TabInterviews
           active={activeTabId == 3 ? true : false}
           data={source}
-          route={`/authors/${source.slug}/Interviews`}
+          route={`/authors/${source.slug}/interviews`}
         />
 
         <section className="pb80">
