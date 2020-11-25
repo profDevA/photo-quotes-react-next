@@ -21,7 +21,7 @@ export default function TabQutoes(props) {
           data.Quotes.map((item, index) => {
             if (!storeData.searchKey) {
               return (
-                <div className="col-12 col-lg-6 wow fadeIn" key={index}>
+                <div className="col-12 col-lg-6 fadeIn px-5" key={index}>
                   <div className="quote mt0">
                     <div className="quote__top">
                       {item.tag_name.length > 0 &&

@@ -163,6 +163,6 @@ export async function getServerSideProps({ params }) {
 
   const res = await axios.get(SERVER_URI + "/api/sources/" + slug);
   return {
-    props: { source: res.data, title: param[0].replace("-"," ") },
+    props: { source: res.data, title: param[0].replace("-"," ").replace("-"," ").replace("-"," ").replace("-"," ").replace("-"," ").replace("-"," ") },
   };
 }

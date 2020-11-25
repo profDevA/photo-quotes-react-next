@@ -10,18 +10,20 @@ export default function TabBooks(props) {
       id="tab-2"
       style={props.active ? { display: "block" } : { display: "none" }}
     >
+      <div className="row books-container justify-content-between">
       {data.Books.length > 0 &&
         data.Books.map((item, index) => {
           if (!storeData.searchKey) {
             return (
-              <div className="row books-container justify-content-between" key={index}>
-                <div className="col-lg-3 col-sm-6 col-12">
+              
+                <div className="col-lg-3 col-sm-6 col-12"  key={index}>
                   <div className="book">
                     <div className="book-top">
-                      <div className="book__cover">
+                      <div className="book__cover" style={{width: '70%'}}>
                         <img
                           src={`${SERVER_URI}/uploads/${item.bookImage}`}
                           alt="Book"
+                          
                         />
                         <div className="cover__hover">
                           <a
@@ -46,18 +48,17 @@ export default function TabBooks(props) {
                     </div>
                   </div>
                 </div>
-              </div>
+           
             );
           } else if (
             item.title.toLowerCase().includes(storeData.searchKey.toLowerCase()) || 
             item.author.toLowerCase().includes(storeData.searchKey.toLowerCase()) 
           ) {
             return (
-              <div className="row books-container justify-content-between" key={index}>
                 <div className="col-lg-3 col-sm-6 col-12">
                   <div className="book">
                     <div className="book-top">
-                      <div className="book__cover">
+                      <div className="book__cover" style={{width: '70%'}}>
                         <img
                           src={`${SERVER_URI}/uploads/${item.bookImage}`}
                           alt="Book"
@@ -85,10 +86,10 @@ export default function TabBooks(props) {
                     </div>
                   </div>
                 </div>
-              </div>
             );
           }
         })}
+           </div>
     </section>
   );
 }

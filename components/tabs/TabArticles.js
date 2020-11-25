@@ -23,7 +23,7 @@ export default function TabArticles(props) {
               return (
                 <div
                   className="col-xl-4 col-md-6"
-                  onClick={() => showArticle(item.title.replace(" ", "-"))}
+                  onClick={() => showArticle(item.title.replaceAll(" ", "-"))}
                   key={index}
                 >
                   <div className="article article__offset">

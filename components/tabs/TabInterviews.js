@@ -30,7 +30,7 @@ export default function TabIntervies(props) {
                 <div
                   className="col-12 col-lg-6 pb-5"
                   key={index}
-                  onClick={() => showInterview(item.title.replace(" ", "-"))}
+                  onClick={() => showInterview(item.title.replaceAll(" ", "-"))}
                   key={index}
                 >
                   <div className="interview row">
