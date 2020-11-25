@@ -15,7 +15,7 @@ export default function Quotes({ source, status }) {
   useEffect(() => {
     
     if(status){
-      router.push(`/error404`);
+      router.replace(`/error404`);
     }
   });
   const [tabs, setTabs] = useState([
