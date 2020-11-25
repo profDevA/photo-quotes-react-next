@@ -43,7 +43,7 @@ export default function Quotes({ source, status }) {
                   key={i}
                   className={activeTabId == i + 1 ? "tab tab__active" : "tab"}
                   data-tab="tab-1"
-                  onClick={() => router.push(`/authors/${source.slug}/${tab}`)}
+                  onClick={() => router.push(`/authors/${source.slug}/${tab.toLowerCase()}`)}
                 >
                   <h3 className="tab-item">{tab}</h3>
                   <span className="tab-item__counter">

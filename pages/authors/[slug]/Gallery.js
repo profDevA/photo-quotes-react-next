@@ -35,7 +35,7 @@ export default function Gallery({ source }) {
                   data-tab="tab-1"
                   onClick={() => {
                     dispatch(setSearch(""));
-                    router.push(`/authors/${source.slug}/${tab}`);
+                    router.push(`/authors/${source.slug}/${tab.toLowerCase()}`);
                   }}
                 >
                   <h3 className="tab-item">{tab}</h3>

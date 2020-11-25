@@ -10,7 +10,7 @@ export default function TabBooks(props) {
       id="tab-2"
       style={props.active ? { display: "block" } : { display: "none" }}
     >
-      <div className="row books-container justify-content-between">
+      <div className="row books-container flex-wrap">
       {data.Books.length > 0 &&
         data.Books.map((item, index) => {
           if (!storeData.searchKey) {
@@ -43,7 +43,7 @@ export default function TabBooks(props) {
                       <a className="book__name title" href="#">
                         {item.title}
                       </a>
-                      <p className="book__number">ISBN 2-266-11156</p>
+                      <p className="book__number pt-4">ISBN 2-266-11156</p>
                       <a className="book__author text18">{item.author}</a>
                     </div>
                   </div>
