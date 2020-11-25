@@ -22,7 +22,7 @@ export default function TabGallery({ source, active }) {
               <div className="col-md-6 col-12 gallery-col pb-5" key={index}>
                 <div className="gallery-item">
                   {/* <img src="/assets/gal1.jpg" alt="" /> */}
-                  <Image src={item.url} unsized />
+                  <img src={item.url} />
                   <span className="gallery-info">{fullName}, {getTime(item.created_at)}</span>
                 </div>
               </div>
