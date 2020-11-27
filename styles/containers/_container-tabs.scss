@@ -3,50 +3,59 @@
   padding-bottom: 70px;
 
   &__p0 {
-    padding: 0!important;
+    padding: 0 !important;
   }
 
-  @media screen and (max-width: $sm-point){
+  .quotes {
+    column-count: 2;
+    column-gap: 20px;
+  }
+
+  @media screen and (max-width: $sm-point) {
     padding-top: 15px;
     padding-bottom: 60px;
+
+    .quotes {
+      column-count: 1;
+      column-gap: 0;
+    }
   }
 }
 
 .authors-filter__alpha {
   .tab {
     &:not(:last-child) {
-      margin-right: 25px!important;
+      margin-right: 25px !important;
     }
   }
 
-  @media screen and (max-width: $lg-point){
+  @media screen and (max-width: $lg-point) {
     .tab {
       &:not(:last-child) {
-        margin-right: 15px!important;
+        margin-right: 15px !important;
       }
     }
   }
 
-  @media screen and (max-width: $md-point){
+  @media screen and (max-width: $md-point) {
     .tab {
       &-item {
-        font-size: 30px!important;
+        font-size: 30px !important;
       }
     }
   }
 
-  @media screen and (max-width: $sm-point){
-    flex-wrap: nowrap!important;
+  @media screen and (max-width: $sm-point) {
+    flex-wrap: nowrap !important;
     overflow-x: scroll;
   }
-
 }
 
 .tab-title {
   opacity: 0;
   height: 0;
   visibility: hidden;
-  transition: opacity .3s ease-in;
+  transition: opacity 0.3s ease-in;
   &__active {
     opacity: 1;
     height: auto;
@@ -66,27 +75,27 @@
     }
 
     &:hover {
-      .tab-item, .tab-item__counter {
+      .tab-item,
+      .tab-item__counter {
         color: $blue;
-
       }
     }
 
     &-item {
-      color:$tab-gray;
+      color: $tab-gray;
       line-height: 70px;
       text-transform: capitalize;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
 
       &__counter {
         line-height: 70px;
         font-size: 30px;
-        font-family: 'Grotzec', sans-serif;
+        font-family: "Grotzec", sans-serif;
         font-weight: 600;
         margin-top: -14px;
-        color:$tab-gray;
+        color: $tab-gray;
         margin-left: 10px;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
       }
 
       &__counter-big {
@@ -96,13 +105,14 @@
     }
 
     &__active {
-      .tab-item, .tab-item__counter {
+      .tab-item,
+      .tab-item__counter {
         color: $dark-gray;
       }
     }
   }
 
-  @media screen and (max-width: $md-point){
+  @media screen and (max-width: $md-point) {
     padding-top: 60px;
     .tab {
       &:not(:last-child) {
@@ -118,7 +128,7 @@
         font-size: 35px;
 
         &__counter {
-         font-size: 20px;
+          font-size: 20px;
         }
 
         &__counter-big {
@@ -129,7 +139,7 @@
     }
   }
 
-  @media screen and (max-width: $sm-point){
+  @media screen and (max-width: $sm-point) {
     padding-top: 30px;
     .tab {
       &:not(:last-child) {
@@ -157,8 +167,8 @@
     }
   }
 
-  @media screen and (max-width: $xs-point){
-    flex-wrap: nowrap!important;
+  @media screen and (max-width: $xs-point) {
+    flex-wrap: nowrap !important;
     overflow-x: scroll;
     overflow-y: hidden;
 

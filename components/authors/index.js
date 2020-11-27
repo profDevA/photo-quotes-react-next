@@ -47,7 +47,7 @@ export default function Quotes({ source, metaTitle, metaDescription, by }) {
         <section className="hero-section__white hero-section row container ptb90">
           <div className="hero-section__left col-xl-4 col-lg-5 col-12 wow fadeInRight">
             <div className="hero-section__left_top">
-              <h2 class="big-lettering" data-tab="tab-1">
+              <h2 className="big-lettering" data-tab="tab-1">
                 {by}
               </h2>
 

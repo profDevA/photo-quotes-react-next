@@ -11,6 +11,7 @@ const Header = (props) => {
                 <meta name="robots" content="noindex" />
                 <title>{props.title}</title>
                 <link rel="icon" href="/favicon.png" />
+                <meta name="description" content={props.description} />
             </Head>
             <header className="container-fluid">
                 <div className="container">
@@ -34,6 +35,11 @@ const Header = (props) => {
             </header>
         </>
     )
+}
+
+Header.defaultProps = {
+    title: "PhotoQuotes",
+    description: "PhotoQuotes"
 }
 
 export default Header;

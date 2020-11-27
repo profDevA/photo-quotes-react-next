@@ -11,19 +11,19 @@ export default function TabBooks(props) {
       style={props.active ? { display: "block" } : { display: "none" }}
     >
       <div className="row books-container flex-wrap">
-      {data.Books.length > 0 &&
-        data.Books.map((item, index) => {
-          if (!storeData.searchKey) {
-            return (
-              
-                <div className="col-lg-3 col-sm-6 col-12"  key={index}>
+        {data.Books.length > 0 &&
+          data.Books.map((item, index) => {
+            if (!storeData.searchKey) {
+              return (
+
+                <div className="col-lg-3 col-sm-6 col-12" key={index}>
                   <div className="book">
                     <div className="book-top">
-                      <div className="book__cover" style={{width: '70%'}}>
+                      <div className="book__cover" style={{ width: '70%' }}>
                         <img
                           src={`${SERVER_URI}/uploads/${item.bookImage}`}
                           alt="Book"
-                          
+
                         />
                         <div className="cover__hover">
                           <a
@@ -40,25 +40,25 @@ export default function TabBooks(props) {
                       </div>
                     </div>
                     <div className="book-bottom">
-                      <a className="book__name title" href="#">
+                      <a className="book__name title" href="#" title={item.title}>
                         {item.title}
                       </a>
-                      <p className="book__number pt-4">ISBN 2-266-11156</p>
+                      <p className="book__number pt-4">{item.isbn}</p>
                       <a className="book__author text18">{item.author}</a>
                     </div>
                   </div>
                 </div>
-           
-            );
-          } else if (
-            item.title.toLowerCase().includes(storeData.searchKey.toLowerCase()) || 
-            item.author.toLowerCase().includes(storeData.searchKey.toLowerCase()) 
-          ) {
-            return (
+
+              );
+            } else if (
+              item.title.toLowerCase().includes(storeData.searchKey.toLowerCase()) ||
+              item.author.toLowerCase().includes(storeData.searchKey.toLowerCase())
+            ) {
+              return (
                 <div className="col-lg-3 col-sm-6 col-12">
                   <div className="book">
                     <div className="book-top">
-                      <div className="book__cover" style={{width: '70%'}}>
+                      <div className="book__cover" style={{ width: '70%' }}>
                         <img
                           src={`${SERVER_URI}/uploads/${item.bookImage}`}
                           alt="Book"
@@ -86,10 +86,10 @@ export default function TabBooks(props) {
                     </div>
                   </div>
                 </div>
-            );
-          }
-        })}
-           </div>
+              );
+            }
+          })}
+      </div>
     </section>
   );
 }

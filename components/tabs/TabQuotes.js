@@ -7,7 +7,7 @@ export default function TabQutoes(props) {
     fullName = fullName.replace(null, "").replace("  ", " ");
   }
   const storeData = useSelector((store) => store.search);
-  // console.log(data.Quotes);
+  console.log(data.Quotes);
 
 
   return (
@@ -16,12 +16,12 @@ export default function TabQutoes(props) {
       id="tab-1"
       style={props.active ? { display: "block" } : { display: "none" }}
     >
-      <div className="row pb80 justify-content-md-between">
+      <div className="quotes pb80 justify-content-md-between">
         {data.Quotes.length > 0 &&
           data.Quotes.map((item, index) => {
             if (!storeData.searchKey) {
               return (
-                <div className="col-12 col-lg-6 fadeIn px-5" key={index}>
+                <div className="pb20 d-inline-block w-100 fadeIn px-5" key={index}>
                   <div className="quote mt0">
                     <div className="quote__top">
                       {item.tag_name.length > 0 &&
@@ -36,7 +36,7 @@ export default function TabQutoes(props) {
                     </div>
                     <div className="quote__bottom">
                       <a className="quote-author" href="#">
-                        {}
+                        {fullName}
                       </a>
                       <div className="icons">
                         <span className="counter"></span>
@@ -49,7 +49,14 @@ export default function TabQutoes(props) {
                       <p className="gray-font">{item.visibleComments}</p>
                     </div>
                     <div className="quote__meta">
-                      <p>{fullName}</p>
+                      <p>
+                        { item.book.isbn && `ISBN: ${item.book.isbn} `}
+                        { item.page && `Page: ${item.page} ` }
+                        { item.book.amazonUrl && 
+                          `This book is available from `
+                        }
+                        <a href={item.book.amazonUrl && item.book.amazonUrl}>Amazon.com</a>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -64,7 +71,7 @@ export default function TabQutoes(props) {
               fullName.toLowerCase().includes(storeData.searchKey.toLowerCase())
             ) {
               return (
-                <div className="col-12 col-lg-6 wow fadeIn" key={index}>
+                <div className="pb20 d-inline-block wow fadeIn" key={index}>
                   <div className="quote mt0">
                     <div className="quote__top">
                       {item.tag_name.length > 0 &&
@@ -79,7 +86,7 @@ export default function TabQutoes(props) {
                     </div>
                     <div className="quote__bottom">
                       <a className="quote-author" href="#">
-                        {}
+                        {fullName}
                       </a>
                       <div className="icons">
                         <span className="counter">7</span>

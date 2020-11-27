@@ -12,6 +12,8 @@ function Authors(props) {
     sources: {},
     selectedTab: "a",
     searchKeyword: "",
+    titel: "Authors - PhotoQuotes",
+    description: 'This is Photo Quotes Authors'
   });
 
   const { sources, selectedTab } = state;
@@ -36,7 +38,7 @@ function Authors(props) {
 
   return (
     <>
-      <Header title={"Authors - PhotoQuotes"} />
+      <Header title={state.title} description={state.description} />
       <main>
         <section className="container ptb90">
           <h1 className="main-title">All Authors</h1>
@@ -60,7 +62,7 @@ function Authors(props) {
           >
             {sources &&
               Object.keys(sources).map((item, index) => {
-                  const fullName=  (sources[item].firstName ? sources[item].firstName : '') + " " + (sources[item].midleName ? sources[item].midleName + ' ' : '') + (sources[item].lastName ? sources[item].lastName : '')
+                  const fullName=  (sources[item].firstName ? sources[item].firstName : '') + " " + (sources[item].middleName ? sources[item].middleName + ' ' : '') + (sources[item].lastName ? sources[item].lastName : '')
                 if (
                     fullName[0]
                     .toLowerCase()
