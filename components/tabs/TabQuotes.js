@@ -50,12 +50,15 @@ export default function TabQutoes(props) {
                     </div>
                     <div className="quote__meta">
                       <p>
-                        { item.book.isbn && `ISBN: ${item.book.isbn} `}
+                        { (item.book && item.book.isbn) && `ISBN: ${item.book.isbn} `}
                         { item.page && `Page: ${item.page} ` }
-                        { item.book.amazonUrl && 
+                        { (item.book && item.book.amazonUrl) && 
                           `This book is available from `
                         }
-                        <a href={item.book.amazonUrl && item.book.amazonUrl}>Amazon.com</a>
+                        {
+                          (item.book && item.book.amazonUrl) && 
+                          <a href={(item.book && item.book.amazonUrl) && item.book.amazonUrl}>Amazon.com</a>
+                        }
                       </p>
                     </div>
                   </div>
